@@ -21,7 +21,7 @@ public class StagiaireService implements InterfaceStagiaireUtil {
 			st = con.prepareStatement(rq);
 			rs = st.executeQuery();
 			while(rs.next()) {
-				Stagiaire sta = new Stagiaire(rs.getInt("id"), rs.getString("prenom"), rs.getString("email"), rs.getDate("ddn"), rs.getString("mdp"));
+				Stagiaire sta = new Stagiaire(rs.getInt("id"), rs.getString("prenom"), rs.getString("mdp"), rs.getString("email"), rs.getString("ddn"));
 				listStagiaires.add(sta);
 			}
 			
@@ -31,6 +31,26 @@ public class StagiaireService implements InterfaceStagiaireUtil {
 		}
 		
 		return listStagiaires;
+	}
+	
+	public void ajouterStagiaire(Stagiaire s) {
+		String req = "INSERT INTO stagiaire VALUES (null, ?, ?, ?, ?)";
+		
+		try {
+			Connection con = MaConnexion.getInstance().getConnection();
+			PreparedStatement stmt = con.prepareStatement(req);
+			
+			stmt.setString(1, s.getPrenom());
+			stmt.setString(2, s.getMdp());
+			stmt.setString(3, s.getEmail());
+			stmt.setString(4, s.getDdn().toString());
+			
+			stmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public String getFirstName() {

@@ -1,17 +1,15 @@
 package crud;
 
-import java.sql.Date;
-
 public class Stagiaire {
 	int id;
 	String prenom;
 	String email;
 	String mdp;
-	Date ddn;
+	String ddn;
 	
 	
 	// CONSTRUCTEURS
-	public Stagiaire(int id, String prenom, String email, Date ddn, String mdp) {
+	public Stagiaire(int id, String prenom, String mdp, String email, String ddn) {
 		this.id = id;
 		this.prenom = prenom;
 		this.email = email;
@@ -33,7 +31,7 @@ public class Stagiaire {
 		this.prenom = prenom;
 	}
 	public String getMdp() {
-		return prenom;
+		return mdp;
 	}
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
@@ -44,10 +42,10 @@ public class Stagiaire {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getDdn() {
+	public String getDdn() {
 		return ddn;
 	}
-	public void setDdn(Date ddn) {
+	public void setDdn(String ddn) {
 		this.ddn = ddn;
 	}
 	

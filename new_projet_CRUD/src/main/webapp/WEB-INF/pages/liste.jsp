@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>Liste des stagiaires</h1>
-<!-- 	<a href="ajouter">Ajouter un Stagiaire</a> -->
+	<a href="ajouter">Ajouter un Stagiaire</a>
 	<table>
 		<thead>
 			<tr>

@@ -45,5 +45,4 @@ public class StagiaireService implements IStagiaireService {
 		
 		st.setString(1, req);
 	}
-
 }

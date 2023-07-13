@@ -14,6 +14,7 @@
 	<table>
 		<thead>
 			<tr>
+				<td>Photo</td>
 				<td>Id</td>
 				<td>Prenom</td>
 				<td>email</td>
@@ -24,11 +25,14 @@
 		<tbody>
 			<c:forEach var="s" items="${listeStagiaires }">
 				<tr>
+					<td><img src=${s.photo } height="50px" width="auto"/></td>
 					<td>${s.id }</td>
 					<td>${s.prenom }</td>
 					<td>${s.email }</td>
 					<td>${s.mdp }</td>
 					<td>${s.ddn }</td>
+					<td><a href="liste?idsup=${s.id }">Supprimer</a></td>
+					<td><a href="ajouter?id=${s.id }&prenom=${s.prenom}&mdp=${s.mdp}&email=${s.email}&ddn=${s.ddn}">Modifier</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

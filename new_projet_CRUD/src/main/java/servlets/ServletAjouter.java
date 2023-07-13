@@ -15,6 +15,15 @@ public class ServletAjouter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		if(request.getParameter("id") != null) {
+			Stagiaire sta = new Stagiaire(
+					Integer.parseInt(request.getParameter("id")), 
+					request.getParameter("prenom"),
+					request.getParameter("mdp"),
+					request.getParameter("email"),
+					request.getParameter("ddn"));
+			request.setAttribute("stagiaire", sta);
+		}
 		request.getRequestDispatcher("/WEB-INF/pages/ajouter.jsp").forward(request, response);
 	}
 
@@ -26,9 +35,16 @@ public class ServletAjouter extends HttpServlet {
 		String ddn = request.getParameter("ddn");
 		
 		Stagiaire s = new Stagiaire(id, prenom, mdp, email, ddn);
-		
 		StagiaireService ss = new StagiaireService();
-		ss.ajouterStagiaire(s);
+		
+		System.out.println(s.toString());
+		
+//		if (request.getParameter("action") != null) {
+//			s.setId(Integer.parseInt(request.getParameter("id")));
+//			ss.modifierStagiaire(s);
+//		} else {
+//			ss.ajouterStagiaire(s);
+//		}
 		
 		response.sendRedirect("liste");
 	}

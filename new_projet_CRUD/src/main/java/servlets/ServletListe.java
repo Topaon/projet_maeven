@@ -1,5 +1,6 @@
 package servlets;
 
+import java.awt.Desktop;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -22,13 +23,16 @@ public class ServletListe extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("idsup");
+		if (id != null) {
+			ss.supprimerStagiaire(Integer.parseInt(id));
+		}
 		ArrayList<Stagiaire> listeStagiaires = ss.getAllStagiaires();
 		request.setAttribute("listeStagiaires", listeStagiaires);
 		request.getRequestDispatcher("/WEB-INF/pages/liste.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 	}
 }

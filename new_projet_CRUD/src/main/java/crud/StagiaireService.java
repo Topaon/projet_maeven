@@ -34,7 +34,7 @@ public class StagiaireService implements InterfaceStagiaireUtil {
 	}
 	
 	public void ajouterStagiaire(Stagiaire s) {
-		String req = "INSERT INTO stagiaire VALUES (null, ?, ?, ?, ?)";
+		String req = "INSERT INTO stagiaire VALUES (null, ?, ?, ?, ?, ?)";
 		
 		try {
 			Connection con = MaConnexion.getInstance().getConnection();
@@ -44,6 +44,7 @@ public class StagiaireService implements InterfaceStagiaireUtil {
 			stmt.setString(2, s.getMdp());
 			stmt.setString(3, s.getEmail());
 			stmt.setString(4, s.getDdn().toString());
+			stmt.setString(5, s.getPhoto());
 			
 			stmt.executeUpdate();
 			
@@ -53,18 +54,35 @@ public class StagiaireService implements InterfaceStagiaireUtil {
 		}
 	}
 	
-	public String getFirstName() {
-		String name = "";
+	public void modifierStagiaire(Stagiaire s) {
+		String req = "UPDATE stagiaire SET prenom = ?, mdp = ?, email = ?, ddn = ? WHERE id = ?";
 		Connection con = MaConnexion.getInstance().getConnection();
-		String rq ="SELECT * FROM stagiaire WHERE id=1";
 		try {
-			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery(rq);
-			name = rs.getString("prenom");
+			PreparedStatement stmt = con.prepareStatement(req);
+			
+			stmt.setString(1, s.getPrenom());
+			stmt.setString(2, s.getMdp());
+			stmt.setString(3, s.getEmail());
+			stmt.setString(4, s.getDdn());
+			stmt.setInt(4, s.getId());
+			
+			stmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return name;
+	}
+	
+	public void supprimerStagiaire(int id) {
+		String req = "DELETE FROM stagiaire WHERE id = ?";
+		try {
+			Connection con = MaConnexion.getInstance().getConnection();
+			PreparedStatement stmt = con.prepareStatement(req);
+			stmt.setInt(1, id);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,20 +1,24 @@
 package crud;
 
+import util.Util;
+
 public class Stagiaire {
 	int id;
 	String prenom;
 	String email;
 	String mdp;
 	String ddn;
+	String photo;
 	
 	
 	// CONSTRUCTEURS
 	public Stagiaire(int id, String prenom, String mdp, String email, String ddn) {
 		this.id = id;
-		this.prenom = prenom;
+		this.prenom = Util.capitalize(prenom);
 		this.email = email;
 		this.ddn = ddn;
 		this.mdp = mdp;
+		this.photo = this.prenom + ".png";
 	}
 	
 	// GETTER SETTER
@@ -48,10 +52,16 @@ public class Stagiaire {
 	public void setDdn(String ddn) {
 		this.ddn = ddn;
 	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 	
 	// TOSTRING()
 	@Override
 	public String toString() {
-		return "Stagiaire [id=" + id + ", prenom=" + prenom + ", email=" + email + ", ddn=" + ddn + "]";
+		return "Stagiaire [id=" + id + ", prenom=" + prenom + ", mdp = " + mdp + ", email=" + email + ", ddn=" + ddn + "]";
 	}
 }

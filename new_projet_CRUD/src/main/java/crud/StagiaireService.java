@@ -15,11 +15,9 @@ public class StagiaireService implements InterfaceStagiaireUtil {
 		ArrayList<Stagiaire> listStagiaires = new ArrayList<Stagiaire>();
 		Connection con = MaConnexion.getInstance().getConnection();
 		String rq ="SELECT * FROM stagiaire";
-		PreparedStatement st = null;
-		ResultSet rs = null;
 		try {
-			st = con.prepareStatement(rq);
-			rs = st.executeQuery();
+			PreparedStatement st = con.prepareStatement(rq);
+			ResultSet rs = st.executeQuery();
 			while(rs.next()) {
 				Stagiaire sta = new Stagiaire(rs.getInt("id"), rs.getString("prenom"), rs.getString("mdp"), rs.getString("email"), rs.getString("ddn"));
 				listStagiaires.add(sta);

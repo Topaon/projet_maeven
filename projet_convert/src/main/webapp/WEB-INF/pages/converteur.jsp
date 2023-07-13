@@ -1,8 +1,8 @@
-<%@ page import="fr.inetum.User" %>
+<%@ page import="fr.inetum.tp.entites.Stagiaire" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-    User user = (User) request.getSession().getAttribute("user");
+Stagiaire user = (Stagiaire) request.getSession().getAttribute("user");
     if (user == null) {
         response.sendRedirect("login");
     }

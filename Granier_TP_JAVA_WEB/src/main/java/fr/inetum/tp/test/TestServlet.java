@@ -1,4 +1,4 @@
-package fr.inetum;
+package fr.inetum.tp.test;
 
 import java.io.IOException;
 
@@ -9,32 +9,17 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/test")
-public class Test extends HttpServlet {
+public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public Test() {
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet du servlet test");
-		String testAtt = "Coucou je suis un string de test";
-		request.getSession().setAttribute("testAtt", testAtt);
+		System.out.println("doGet du servlet test du projet TP JAVA/SQL");
 		request.getRequestDispatcher("/WEB-INF/pages/test.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		System.out.println("doPost du servlet test du projet JAVA/SQL");
+		System.out.println(request.getParameter("test"));
+		response.sendRedirect("test");
 	}
-
 }

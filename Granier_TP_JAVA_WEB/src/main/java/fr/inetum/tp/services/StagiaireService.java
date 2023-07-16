@@ -86,8 +86,8 @@ public class StagiaireService implements IStagiaireService {
 
 	@Override
 	public void addStagiaire(Stagiaire stagiaire, Adresse adresse) {
-		String req1 = "INSERT INTO stagiaire VALUES (null, ?, ?, ?, ?, ?, ?)";
-		String req2 = "INSERT INTO adresse VALUES (null, ?, ?, ?)";
+		String req1 = "INSERT INTO stagiaire VALUES (null,?, ?, ?, ?, ?, ?)";
+		String req2 = "INSERT INTO adresse VALUES (null,?, ?, ?)";
 		
 		try {
 			Connection con = MaConnexion.getInstance().getConnection();
@@ -104,6 +104,8 @@ public class StagiaireService implements IStagiaireService {
 			java.sql.Statement stmt3 = con.createStatement();
 			ResultSet rs = stmt3.executeQuery(req3);
 			rs.next();
+			
+			System.out.println();
 			
 			stmt1.setString(1, stagiaire.getPrenom());
 			stmt1.setString(2, stagiaire.getEmail());
@@ -157,7 +159,6 @@ public class StagiaireService implements IStagiaireService {
 			PreparedStatement stmt = con.prepareStatement(req);
 			stmt.setString(1, email);
 			stmt.setString(2, mdp);
-			System.out.println(req);
 			ResultSet rs = stmt.executeQuery();
 			rs.next();
 			stagiaire.setId(rs.getInt("id"));
@@ -167,10 +168,9 @@ public class StagiaireService implements IStagiaireService {
 			stagiaire.setAdresse(as.readAdresse(rs.getInt("adresseId")));
 			stagiaire.setDdn(Date.valueOf((rs.getString("ddn"))));
 			stagiaire.setRole(rs.getString("role"));
-			
+			System.out.println(stagiaire.toString());
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Une exception de type SQLException a été levée");
 		}
 		return stagiaire;
 	}

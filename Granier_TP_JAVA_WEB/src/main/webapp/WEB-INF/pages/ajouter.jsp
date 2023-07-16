@@ -1,6 +1,13 @@
+<%@ page import="fr.inetum.tp.entites.Stagiaire" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+Stagiaire user = (Stagiaire) request.getSession().getAttribute("user");
+    if (user == null || user.getRole() != "admin") {
+        response.sendRedirect("login");
+    }
+%>
 <!DOCTYPE html>
 <html>
 <head>

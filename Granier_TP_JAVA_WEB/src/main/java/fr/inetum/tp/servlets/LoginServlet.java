@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet du servlet login");
+		System.out.println("doGet du servlet login du projet TP JAVA/SQL");
 		System.out.println(request.getSession().getAttribute("failed"));
 		if(request.getSession().getAttribute("failed") == "oui") {
 			request.setAttribute("failed", "oui");
@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("ohé");
+		System.out.println("doPost du servlet login du projet TP JAVA/SQL");
 		String email = request.getParameter("email");
 		String mdp = request.getParameter("mdp");
 		
@@ -56,11 +56,12 @@ public class LoginServlet extends HttpServlet {
 		
 		stagiaire = ss.getStagiaire(email, mdp);
 		
-		if (stagiaire.getEmail().equals(email) && stagiaire.getMdp().equals(mdp)) {
+		if (stagiaire.getEmail() != null && stagiaire.getMdp()!= null && stagiaire.getEmail().equals(email) && stagiaire.getMdp().equals(mdp)) {
 			request.getSession().setAttribute("user", stagiaire);
 			request.getSession().setAttribute("failed", "non");
 			response.sendRedirect("liste");
 		} else {
+			request.getSession().setAttribute("failed", "oui");
 			response.sendRedirect("login");
 		}
 	}

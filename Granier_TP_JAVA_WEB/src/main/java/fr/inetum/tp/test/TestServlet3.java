@@ -9,19 +9,20 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/test")
-public class TestServlet extends HttpServlet {
+@WebServlet("/test3")
+public class TestServlet3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet du servlet test du projet JAVA/SQL");
-		request.getRequestDispatcher("/WEB-INF/pages/test.jsp").forward(request, response);
+		System.out.println("doGet du servlet test3 du projet JAVA/SQL");
+		System.out.println(request.getParameter("parametreTest"));
+		System.out.println(request.getAttribute("attributTest"));
+		request.getRequestDispatcher("/WEB-INF/pages/test3.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost du servlet test du projet JAVA/SQL");
-		System.out.println(request.getParameter("parametreTest"));
+		System.out.println("doPost du servlet test3 du projet JAVA/SQL");
 		
-		response.sendRedirect("test");
+		response.sendRedirect("test3");
 	}
 }

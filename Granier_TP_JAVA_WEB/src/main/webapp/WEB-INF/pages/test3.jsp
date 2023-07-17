@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% System.out.println(request.getParameter("parametreTest")); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +12,7 @@
 <title>Test</title>
 </head>
 <body>
-	<h1>Test 1</h1>
-	<form method="post">
-		<div >
-			<label >test</label>
-		</div>
-		<button type="submit">Valider</button>
-	</form>
-	<a href="test2?parametreTest=parametre test">Lien vers la page test2.jsp</a>
+	<h1>Test 3</h1>
+	<a href="test3">Lien vers la page test3.jsp</a>
 </body>
 </html>

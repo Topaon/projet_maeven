@@ -11,13 +11,17 @@
 <title>Test</title>
 </head>
 <body>
-	<h1>Test 1</h1>
+	<h1>Test 2</h1>
+	<p></p>
 	<form method="post">
 		<div >
+		<p>${parametreTest }</p>
+		<p>${attributTest }</p>
 			<label >test</label>
+			<input type="text" name="jose" placeholder="Saisir une valeur pour tester la portée de request.getParameter">
 		</div>
 		<button type="submit">Valider</button>
 	</form>
-	<a href="test2?parametreTest=parametre test">Lien vers la page test2.jsp</a>
+	<a href="test3">Lien vers la page test3.jsp</a>
 </body>
 </html>

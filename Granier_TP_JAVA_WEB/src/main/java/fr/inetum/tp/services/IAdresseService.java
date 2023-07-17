@@ -8,4 +8,5 @@ public interface IAdresseService {
 	ArrayList<Adresse> allAdresse();
 	Adresse readAdresse(int id);
 	Adresse addAdresse(Adresse a);
+	Integer getMaxAdresseId();
 }

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import fr.inetum.tp.entites.Adresse;
@@ -72,5 +73,22 @@ public class AdresseService implements IAdresseService {
 			e.printStackTrace();
 		}
 		return adresse;
+	}
+	
+	@Override
+	public Integer getMaxAdresseId() {
+		Integer maxAdresseId = null;
+		String req = "SELECT max(id) AS maxId FROM adresse";
+		Connection con = MaConnexion.getInstance().getConnection();
+		try {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			rs.next();
+			maxAdresseId = Integer.parseInt(rs.getString("maxId"));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return maxAdresseId;
 	}
 }

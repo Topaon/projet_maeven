@@ -18,10 +18,11 @@ public class AjouterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doGet du servlet ajouter");
 		if(request.getParameter("id") != null) {
 			AdresseService as = new AdresseService();
-			Adresse adresse = as.readAdresse(Integer.parseInt(request.getParameter("adresse")));
-			Stagiaire stagiaire = new Stagiaire(
+			Adresse adresse = as.readAdresse(Integer.parseInt(request.getParameter("adresseId")));
+			Stagiaire stagiaireAdd = new Stagiaire(
 					Integer.parseInt(request.getParameter("id")), 
 					request.getParameter("prenom"),
 					request.getParameter("email"),
@@ -29,37 +30,38 @@ public class AjouterServlet extends HttpServlet {
 					adresse,
 					Date.valueOf(request.getParameter("ddn")),
 					request.getParameter("role"));
-			request.setAttribute("stagiaire", stagiaire);
+			stagiaireAdd.setId(Integer.parseInt(request.getParameter("id")));
+			request.setAttribute("stagiaireAdd", stagiaireAdd);
 		}
 		request.getRequestDispatcher("/WEB-INF/pages/ajouter.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doPost du servlet ajouter");
 		AdresseService as = new AdresseService();
 		
-		int id = 0;
-		String prenom = request.getParameter("prenom");
-		String email = request.getParameter("email");
-		String mdp = request.getParameter("mdp");
-		Adresse adresse = new Adresse(); //as.readAdresse(Integer.parseInt(request.getParameter("adresse")));
-		Date ddn = Date.valueOf(request.getParameter("ddn"));
-		String role = request.getParameter("role");
+		String prenom = request.getParameter("prenomNew");
+		String email = request.getParameter("emailNew");
+		String mdp = request.getParameter("mdpNew");
+		Date ddn = Date.valueOf(request.getParameter("ddnNew"));
+		String role = request.getParameter("roleNew");
 		
-		Stagiaire stagiaire = new Stagiaire(id, prenom, email, mdp, adresse, ddn, role);
-		
-		String nomVoie = request.getParameter("nomVoie");
-		String codePostal = request.getParameter("codePostal");
-		String ville = request.getParameter("ville");
-		
-		Adresse newAdresse = new Adresse(id, nomVoie, codePostal, ville);
+		String nomVoie = request.getParameter("nomVoieNew");
+		String codePostal = request.getParameter("codePostalNew");
+		String ville = request.getParameter("villeNew");
 		
 		StagiaireService ss = new StagiaireService();
 		
 		if (request.getParameter("action") != null) {
-			stagiaire.setId(Integer.parseInt(request.getParameter("id")));
+			Integer id = Integer.parseInt(request.getParameter("idNew"));
+			Adresse adresse = as.readAdresse(Integer.parseInt(request.getParameter("adresseId")));
+			Stagiaire stagiaire = new Stagiaire(id, prenom, email, mdp, adresse, ddn, role);
 			ss.updateStagiaire(stagiaire);
 		} else {
-			ss.addStagiaire(stagiaire, newAdresse);
+			Integer id = 0;
+			Adresse adresse = new Adresse(id, nomVoie, codePostal, ville);
+			Stagiaire stagiaire = new Stagiaire(id, prenom, email, mdp, adresse, ddn, role);
+			ss.addStagiaire(stagiaire, adresse);
 		}
 		response.sendRedirect("liste");
 	}

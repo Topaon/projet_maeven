@@ -14,18 +14,21 @@
 	<h1>Page de test</h1>
 	<form method="post">
 		<div >
-			<label >Email</label> <input
-				type="email" name="test"
-				placeholder="Saisir votre login au format @email">
+			<label >test</label>
+			<input type="text" name="mdp" value="${stagiaire.prenom }" placeholder="Saisir une valeur test">
 		</div>
-		<div>
-			<input type="submit" value="Valider" />
-			<input type="reset" value="Reset"/>
-		</div>
+<!-- 		<div> -->
+<!-- 			<input type="submit" value="Valider" /> -->
+<!-- 			<input type="reset" value="Reset"/> -->
+<!-- 		</div> -->
+		<c:choose>
+		<c:when test="${not empty stagiaire }">
+			<button type="submit" name="action" value="modifier">Modifier</button>
+		</c:when>
+		<c:otherwise>
+			<button type="submit">Valider</button>
+		</c:otherwise>	
+	</c:choose>	
 	</form>
-<!-- 	<form method="post"> -->
-<!-- 		<input type="text" name="test" /> -->
-<!-- 		<input type="submit" name="valider" /> -->
-<!-- 	</form> -->
 </body>
 </html>

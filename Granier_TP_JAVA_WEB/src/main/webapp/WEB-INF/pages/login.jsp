@@ -17,11 +17,11 @@
 		<form method="post" class="login-form">
 		  <div class="mb-3">
 		    <label class="form-label">Adresse email</label>
-		    <input type="text" class="form-control" placeholder="email"/>
+		    <input type="text" class="form-control" placeholder="email" name="email"/>
 		  </div>
 		  <div class="mb-3">
 		    <label class="form-label">Mot de passe</label>
-		    <input type="password" class="form-control" placeholder="mot de passe"/>
+		    <input type="password" class="form-control" placeholder="mot de passe" name="mdp"/>
 		  </div>
 		  <c:if test="${failed == 'oui' }">
 			<p class="alert alert-danger" role="alert">Email ou mot de passe incorrect</p>

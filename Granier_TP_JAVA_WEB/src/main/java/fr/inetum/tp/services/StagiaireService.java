@@ -69,6 +69,32 @@ public class StagiaireService implements IStagiaireService {
 		}
 		return listStagiaires;
 	}
+	
+	@Override
+	public void addStagiaire(Stagiaire stagiaire, Adresse adresse) {
+		String req = "INSERT INTO stagiaire VALUES (null,?, ?, ?, ?, ?, ?)";
+		
+		try {
+			AdresseService as = new AdresseService();
+			as.addAdresse(adresse);			
+			
+			Connection con = MaConnexion.getInstance().getConnection();
+			PreparedStatement stmt1 = con.prepareStatement(req);
+			
+			stmt1.setString(1, stagiaire.getPrenom());
+			stmt1.setString(2, stagiaire.getEmail());
+			stmt1.setString(3, stagiaire.getMdp());
+			stmt1.setString(4, as.getMaxAdresseId().toString());
+			stmt1.setString(5, stagiaire.getDdn().toString());
+			stmt1.setString(6, stagiaire.getRole());
+			
+			stmt1.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	@Override
 	public void removeStagiaire(Stagiaire s) {
@@ -78,44 +104,6 @@ public class StagiaireService implements IStagiaireService {
 			PreparedStatement stmt = con.prepareStatement(req);
 			stmt.setInt(1, s.getId());
 			stmt.executeUpdate();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	@Override
-	public void addStagiaire(Stagiaire stagiaire, Adresse adresse) {
-		String req1 = "INSERT INTO stagiaire VALUES (null,?, ?, ?, ?, ?, ?)";
-		String req2 = "INSERT INTO adresse VALUES (null,?, ?, ?)";
-		
-		try {
-			Connection con = MaConnexion.getInstance().getConnection();
-			PreparedStatement stmt1 = con.prepareStatement(req1);
-			PreparedStatement stmt2 = con.prepareStatement(req2);
-			
-			stmt2.setString(1, adresse.getNomVoie());
-			stmt2.setString(2, adresse.getCodePostal());
-			stmt2.setString(3, adresse.getVille());
-			
-			stmt2.executeUpdate();
-			
-			String req3 = "SELECT MAX(id) FROM adresse";
-			java.sql.Statement stmt3 = con.createStatement();
-			ResultSet rs = stmt3.executeQuery(req3);
-			rs.next();
-			
-			System.out.println();
-			
-			stmt1.setString(1, stagiaire.getPrenom());
-			stmt1.setString(2, stagiaire.getEmail());
-			stmt1.setString(3, stagiaire.getMdp());
-			stmt1.setString(4, stagiaire.getAdresse().getId().toString());
-			stmt1.setString(5, stagiaire.getDdn().toString());
-			stmt1.setString(6, stagiaire.getRole());
-			
-			stmt1.executeUpdate();
-			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -168,16 +156,14 @@ public class StagiaireService implements IStagiaireService {
 			stagiaire.setAdresse(as.readAdresse(rs.getInt("adresseId")));
 			stagiaire.setDdn(Date.valueOf((rs.getString("ddn"))));
 			stagiaire.setRole(rs.getString("role"));
-			System.out.println(stagiaire.toString());
 		} catch (SQLException e) {
-			System.out.println("Une exception de type SQLException a été levée");
+			System.out.println("Email ou mot de passe incorrect");
 		}
 		return stagiaire;
 	}
 	
 	public void updateStagiaire(Stagiaire stagiaire) {
-		System.out.println(stagiaire.toString());
-		String req = "UPDATE stagiaire SET prenom=?, email=?, mdp=?, adresseId=?, ddn=?, role=? WHERE id=?";
+		String req = "UPDATE stagiaire SET prenom=?, email=?, mdp=?, ddn=?, role=? WHERE id=?";
 		Connection con = MaConnexion.getInstance().getConnection();
 		
 		try {
@@ -186,12 +172,10 @@ public class StagiaireService implements IStagiaireService {
 			stmt.setString(1, stagiaire.getPrenom());
 			stmt.setString(2, stagiaire.getEmail());
 			stmt.setString(3, stagiaire.getMdp());
-			stmt.setString(4, stagiaire.getAdresse().getId().toString());
-			stmt.setString(5, stagiaire.getDdn().toString());
-			stmt.setString(6, stagiaire.getRole());
+			stmt.setString(4, stagiaire.getDdn().toString());
+			stmt.setString(5, stagiaire.getRole());
 			
-			stmt.setString(7, stagiaire.getId().toString());
-			System.out.println(stagiaire.getId().toString());
+			stmt.setString(6, stagiaire.getId().toString());
 			stmt.executeUpdate();
 			
 		} catch (SQLException e) {

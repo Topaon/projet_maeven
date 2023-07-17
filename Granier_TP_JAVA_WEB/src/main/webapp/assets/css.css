@@ -29,10 +29,6 @@ h1 {
 	justify-content: space-between;
 }
 
-input::placeholder {
-  color: red;
-}
-
 .liste-main-div {
 	width: 95%;
 	margin: auto;
@@ -54,4 +50,8 @@ input::placeholder {
 
 #list-btn-add {
 	margin: 0px 0px 0px 50px;
+}
+
+#list-btn-disconnect {
+	margin: 0px 50px 0px 0px;
 }

@@ -7,32 +7,30 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/bs/css/bootstrap.css" />
-<link rel="stylesheet" href="assets/css/app.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link href="assets/css.css" rel="stylesheet">
 <title>Login Page</title>
 </head>
 <body>
-	<div class="content">
-		<div class="header">projet converter</div>
-		<div class="monForm shadow mt-5">
-			<div class="titre bg-primary">login form</div>
-			<form method="post">
-				<div class="mb-3">
-					<label for="login" class="form-label">Email</label> <input
-						type="email" class="form-control" id="login" name="email"
-						placeholder="Saisir votre login au format @email">
-				</div>
-				<div class="mb-3">
-					<label for="mdp" class="form-label">Mot de passe</label> <input
-						type="password" class="form-control" id="mdp" name="mdp"
-						placeholder="Saisir votre mot de passe">
-				</div>
-				<div>
-					<input type="submit" value="Valider" class="btn btn-primary" /> <input
-						type="reset" value="Reset" class="btn btn-secondary float-end" />
-				</div>
-			</form>
-		</div>
+	<div class="main-div">
+		<h1>TP Java/SQL</h1>
+		<form method="post" class="login-form">
+		  <div class="mb-3">
+		    <label class="form-label">Adresse email</label>
+		    <input type="text" class="form-control" placeholder="email" name="email"/>
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Mot de passe</label>
+		    <input type="password" class="form-control" placeholder="mot de passe" name="mdp"/>
+		  </div>
+		  <c:if test="${failed == 'oui' }">
+			<p class="alert alert-danger" role="alert">Email ou mot de passe incorrect</p>
+		  </c:if>
+		  <div class="container-flex-end">
+		    <button type="reset" class="btn btn-primary">Reset</button>
+		    <button type="submit" class="btn btn-primary">Valider</button>
+		  </div>
+		</form>
 	</div>
 </body>
 </html>

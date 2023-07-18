@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	color: rgb(77, 77, 77);
+}
+
+.login-form {
+	padding: 10px;
+}
+
+.main-div {
+	width: 40%;
+	margin: auto;
+	margin-top: 10%;
+	padding: 30px 60px 30px 60px;
+	border: 1px solid rgb(229, 229, 229);
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px lightgrey;
+}
+
+.alert alert-danger {
+	padding: auto
+}
+
+.container-flex-end {
+	display: flex;
+	justify-content: space-between;
+}
+
+.liste-main-div {
+	width: 95%;
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid rgb(229, 229, 229);
+}
+
+.row-head {
+	font-weight: bold;
+	height: 50px;
+}
+
+.list-title {
+	font-weight: bold;
+	color: rgb(77, 77, 77);
+	font-size: 40px;
+	margin: 10px 0px 20px 50px
+}
+
+#list-btn-add {
+	margin: 0px 0px 0px 50px;
+}
+
+#list-btn-disconnect {
+	margin: 0px 50px 0px 0px;
+}

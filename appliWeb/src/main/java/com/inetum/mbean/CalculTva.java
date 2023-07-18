@@ -1,7 +1,13 @@
 package com.inetum.mbean;
 
-@jakarta.faces.bean.ManagedBean // géré par Bean
-@jakarta.faces.bean.RequestScoped // Données dans la Session
+import jakarta.faces.bean.ManagedBean;
+import jakarta.faces.bean.SessionScoped;
+
+
+
+
+@ManagedBean // géré par Bean
+@SessionScoped // Où sera stockée l'instance de la classe CalculTva
 public class CalculTva {
 	private Double ht;
 	private Double taux = 0.2;

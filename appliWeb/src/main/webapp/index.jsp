@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="calculTva.jsf">calcul (calcul.jsp ou ou calcul.xhtml en passant par FacesServlet de jsf)</h1>
+	<p>Liste des applications</p>
+	<a href="calcul.jsf">Calcul</a><br/>
+	<a href="calculTva.jsf">CalculTva</a><br/>
+	<a href="login.jsf">Login</a><br/>
+	<a href="produits.jsf">Produits</a><br/>
 </body>
 </html>

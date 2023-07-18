@@ -1,9 +1,7 @@
 package fr.inetum.tp.servlets;
 
 import java.io.IOException;
-import java.sql.Date;
 
-import fr.inetum.tp.entites.Adresse;
 import fr.inetum.tp.entites.Stagiaire;
 import fr.inetum.tp.services.StagiaireService;
 import jakarta.servlet.ServletException;

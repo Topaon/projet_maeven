@@ -4,12 +4,16 @@
 	width:100%;
 	font-size:36px;
 	line-height:48px;
-	background-color:navy;
-	color:white
 }
 
 .footer {
-	background-color:navy;
-	width:100%;color:white
+	width:100%;
 }
 
+.footer-index-link {
+	color: black;
+}
+
+.produit-form-cat {
+	width: 30%;
+}

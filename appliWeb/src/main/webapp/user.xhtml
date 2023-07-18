@@ -7,17 +7,9 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <ui:composition template="/templates/common.xhtml">
-	<ui:define name="title">Calcul</ui:define>
 	<ui:define name="content">
-		<h:messages /> <!-- affiche d'éventuels messages d'erreur -->
-	    <hr/>
-	    <h:form>
-			<label>x : </label><h:inputText value="#{calcul.x }" />
-			<h:commandButton value="calcul de la racine carrée" action="#{calcul.calculerRacineCarre }" />
-		</h:form>
-		<hr/>
-		
-		resultat : <h:outputText value="#{calcul.res }" />
+	   <p>Utilisateur : #{user.nomUtil}</p>
+	   <p>Est connecté : #{user.isConnected}</p>
 	</ui:define>
 </ui:composition>
 </html>

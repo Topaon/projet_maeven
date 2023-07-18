@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.header {
+	width:100%;
+	font-size:36px;
+	line-height:48px;
+	background-color:navy;
+	color:white
+}
+
+.footer {
+	background-color:navy;
+	width:100%;color:white
+}
+

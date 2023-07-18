@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Bonjour</h1>
-	<p>Je m'appelle Simon</p>
+	<a href="calculTva.jsf">calcul (calcul.jsp ou ou calcul.xhtml en passant par FacesServlet de jsf)</h1>
 </body>
 </html>

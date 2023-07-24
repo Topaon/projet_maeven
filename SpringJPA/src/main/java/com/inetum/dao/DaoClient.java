@@ -18,13 +18,15 @@ public class DaoClient implements InterfaceDaoClient {
 	
 	@Override
 	public List<Client> findAll() {
-		return entityManager.createQuery("SELECT c FROM client c", Client.class).getResultList();
+		return entityManager.createQuery("SELECT c FROM Client c", Client.class).getResultList();
 	}
 
 	@Override
 	public Client addClient(Client c) {
+		// Comme on a mit @Transactional, à partir d'ici les objets appellés en base sont tenu à jour
 		entityManager.persist(c);
 		return c;
+		// Et à partir de là c'est fini (donc à l'endroit où la méthode a été appellée ça sera fini direct
 	}
 
 	@Override

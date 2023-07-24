@@ -12,7 +12,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 @Entity
-@NamedQuery(name="Client.getAllClients", query="SELECT c FROM Client c LEFT JOIN FETCH c.commandes")
+@NamedQuery(name="Client.getAllClients", query="SELECT DISTINCT c FROM Client c JOIN FETCH c.commandes")
 public class Client {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,21 +1,11 @@
 package com.inetum.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 
-@Entity
 @NamedQuery(name="allCompteWithMin", query="SELECT c FROM Compte c WHERE c.solde>?1")
 @NamedQuery(name="allCompteWithMax", query="SELECT c FROM Compte c WHERE c.solde<?1")
 public class Compte {
@@ -23,20 +13,7 @@ public class Compte {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer numero;
 	private String label;
-	private Double solde;
-	
-	@OneToMany(fetch=FetchType.LAZY, mappedBy = "compte", cascade = CascadeType.ALL) // si LAZY fonctionne pas mettre EAGER
-	private List<Operation> operations;
-	// Le mode LAZY renvoie uniquement le compte quand on l'appelle (performant)
-	// le mode EAGER amene toutes ses opérations avec (lourd)
-	
-	@ManyToMany
-	@JoinTable(name="compte_client", 
-		joinColumns = {@JoinColumn(name="num_compte")},
-		inverseJoinColumns = {@JoinColumn(name="num_client")})
-	private List<Client> clients;
-	
-	
+	private Double solde;	
 	
 	// CONSTRUCTORS
 	public Compte(Integer numero, String label, Double solde) {
@@ -44,8 +21,6 @@ public class Compte {
 		this.numero = numero;
 		this.label = label;
 		this.solde = solde;
-		this.operations = new ArrayList<Operation>();
-		this.clients = new ArrayList<Client>();
 	}
 	
 	// GETTERS SETTERS
@@ -69,18 +44,6 @@ public class Compte {
 	}
 	public void setSolde(Double solde) {
 		this.solde = solde;
-	}
-	public List<Operation> getOperations() {
-		return operations;
-	}
-	public void setOperations(List<Operation> operations) {
-		this.operations = operations;
-	}
-	public List<Client> getClients() {
-		return clients;
-	}
-	public void setClient(List<Client> clients) {
-		this.clients = clients;
 	}
 
 	// TO STRING

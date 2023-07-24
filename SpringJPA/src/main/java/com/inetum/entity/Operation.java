@@ -6,12 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity
 public class Operation {
 
 	@Id
@@ -22,11 +19,6 @@ public class Operation {
 	
 	@Temporal(TemporalType.DATE)
 	private Date dateOp;
-	
-	@ManyToOne
-	 @JoinColumn(name="num_compte")
-	private Compte compte;
-
 	
 	// CONSTRUCTEURS
 	public Operation() {
@@ -39,7 +31,6 @@ public class Operation {
 		this.montant = montant;
 		this.label = label;
 		this.dateOp = dateOp;
-		this.compte = compte;
 	}
 
 	public Operation(Integer idOp, Double montant, String label, Date dateOp) {
@@ -81,14 +72,6 @@ public class Operation {
 
 	public void setDateOp(Date dateOp) {
 		this.dateOp = dateOp;
-	}
-
-	public Compte getCompte() {
-		return compte;
-	}
-
-	public void setCompte(Compte compte) {
-		this.compte = compte;
 	}
 	
 	//TO STRING

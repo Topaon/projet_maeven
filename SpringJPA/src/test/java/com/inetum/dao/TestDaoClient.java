@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.inetum.entity.Client;
-import com.inetum.entity.Compte;
+import com.inetum.entity.Employe;
+import com.inetum.entity.Personne;
 
 @SpringBootTest
 public class TestDaoClient {
@@ -17,25 +18,21 @@ public class TestDaoClient {
 	private DaoClient daoClient;
 	
 	@Autowired
-	private DaoCompte daoCompte;
+	private DaoEmploye daoEmploye;
+	
+	@Autowired
+	private DaoPersonne daoPersonne;
 	
 	@Test
 	public void testClientEtComptes() {
-		Compte c1 = new Compte(null, "Compte partagé", 100.0);
-		daoCompte.addCompte(c1);
-		Compte c2 = new Compte(null, "Compte solo", 50.0);
-		daoCompte.addCompte(c2);
+		daoClient.addClient(new Client(null, "Simon", "GRANIER"));
+		daoClient.addClient(new Client(null, "Madame", "GRANIER"));
 		
-		Client clA = daoClient.addClient(new Client(null, "Simon", "GRANIER"));
-		Client clB = daoClient.addClient(new Client(null, "Madame", "GRANIER"));
+		daoEmploye.insertEmploye(new Employe(null, "Roger", "COMPTA", "r@sfr.fr"));
+		daoEmploye.insertEmploye(new Employe(null, "Martine", "RH", "s@sfr.fr"));
 		
-		c1.getClients().add(clA);
-		c1.getClients().add(clB);
-		clA.getComptes().add(c1);
-		clB.getComptes().add(c1);
-		
-		daoCompte.updateCompte(c1);
-		daoClient.updateClient(clA);
-		daoClient.updateClient(clB);
+		for(Personne p : daoPersonne.findAll()) {
+			logger.trace(p.toString());
+		}
 	}
 }

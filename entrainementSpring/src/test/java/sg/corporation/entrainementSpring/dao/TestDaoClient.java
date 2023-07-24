@@ -23,13 +23,13 @@ public class TestDaoClient {
 	
 	@Test
 	public void testForeignKey() {
-		Client cA = new Client(null, "Granier", "s@sfr.fr");
-		Client cB = new Client(null, "Granier", "j@sfr.fr");
+		Client cA = new Client(null, "Simon GRANIER", "s@sfr.fr");
+		Client cB = new Client(null, "Judith GRANIER", "j@sfr.fr");
 		
 		Commande c1 = new Commande(null, "Achat Elden Ring", cA);
 		Commande c2 = new Commande(null, "Week-end LA2", cA);
-		Commande c3 = new Commande(null, "Achat PS5", cB);
-		Commande c4 = new Commande(null, "Achat PS4", cB);
+		Commande c3 = new Commande(null, "Achat tente", cB);
+		Commande c4 = new Commande(null, "Achat Leroy Merlin", cB);
 		
 		cA.getCommandes().add(c1);
 		cA.getCommandes().add(c2);
@@ -47,7 +47,7 @@ public class TestDaoClient {
 		List<Client> clients = dcli.allClients();
 		for(Client c : clients) {
 			for(Commande com : c.getCommandes()) {
-				System.out.println("Commande : " + com.getLabel() + " passée par quelqun");
+				System.out.println("Commande : " + com.getLabel() + " passée par : " + c.getNom());
 			}
 		}
 	}

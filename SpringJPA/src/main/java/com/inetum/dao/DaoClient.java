@@ -44,5 +44,4 @@ public class DaoClient implements InterfaceDaoClient {
 	public void deleteClientById(Integer id) {
 		entityManager.remove(entityManager.find(Client.class, id));
 	}
-
 }

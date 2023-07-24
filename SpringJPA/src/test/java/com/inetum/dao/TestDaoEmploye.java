@@ -35,6 +35,6 @@ public class TestDaoEmploye {
 			logger.debug(emp.toString());
 			logger.trace(emp.toString());
 		}
-		assertEquals(employes, 4);
+		assertEquals(employes.size(), 4);
 	}
 }

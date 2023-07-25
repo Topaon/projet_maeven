@@ -25,6 +25,7 @@ public class DaoClient implements InterfaceDaoClient {
 	public Client addClient(Client c) {
 		// Comme on a mit @Transactional, à partir d'ici les objets appellés en base sont tenu à jour
 		entityManager.persist(c);
+		c.setNom("test"); // mais là on peut encore le modifier ça sera automatiquement mis à jour (à tester)
 		return c;
 		// Et à partir de là c'est fini (donc à l'endroit où la méthode a été appellée ça sera fini direct
 	}

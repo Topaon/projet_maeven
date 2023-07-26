@@ -3,11 +3,18 @@ package com.inetum.WebServiceRest.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.inetum.WebServiceRest.dao.DaoCompte;
@@ -30,13 +37,61 @@ public class CompteRestCtrl {
 		return daoCompte.getById(code);
 	}
 
-	@GetMapping("/all") // s'il n'y a qu'un seul parametre le 'value=' est facultatif
-	public List<Compte> getAllCompte() {
-		return daoCompte.findAll();
+	@GetMapping("") // s'il n'y a qu'un seul parametre le 'value=' est facultatif
+	public List<Compte> getAllCompte(@RequestParam(value="soldeMini", required=false) Double soldeMini) {
+		if(soldeMini == null) {
+			System.out.println(soldeMini);
+			return daoCompte.findAll();
+		}
+		else {
+			System.out.println(soldeMini);
+			return daoCompte.findBySoldeMini(soldeMini);
+		}
 	}
 	
-	@GetMapping("/min/{soldeMin}") // s'il n'y a qu'un seul parametre le 'value=' est facultatif
-	public List<Compte> getAllCompte(@PathVariable("soldeMin") Double min) {
-		return daoCompte.findBySoldeMini(min);
+	
+	/**
+	 * exemple de fin d'url : ./api-bank/compte
+	 * Appellée en mode POST avec dans la partie invisble de la requète, BODY :
+	 * { "numero" : null, "label" : "Label du compte", "solde" : 50d }
+	 * @param compte
+	 * @return
+	 */
+	@PostMapping("")
+	public Compte postCompte(@RequestBody Compte compte) {
+		return daoCompte.addCompte(compte);
+	}
+
+	@PutMapping("")
+	public ResponseEntity<?> putCompte(@RequestBody Compte compte) {
+		Integer numCompteToUpdate = compte.getNumero();
+		Compte compteExistant = daoCompte.getById(numCompteToUpdate);
+		if(compteExistant == null) {
+			return new ResponseEntity<String>("{ \"err\" : \"compte not found\"}", HttpStatus.NOT_FOUND); // NOT_FOUND = 404
+		}
+		daoCompte.updateCompte(compte);
+		return new ResponseEntity<Compte>(compte, HttpStatus.OK); // OK = 200
+	}
+//	VERSION avec le compte à supprimmer dans le body
+//	@DeleteMapping("")
+//	public ResponseEntity<?> deleteCompte(@RequestBody Compte compte) {
+//		daoCompte.deleteCompteById(compte.getNumero());
+//		return new ResponseEntity<String>("Suppression réussie", HttpStatus.I_AM_A_TEAPOT);
+//	}
+	
+//	VERSION avec l'id du compte à supprimmer en paramètre de la requète
+//	@DeleteMapping("")
+//	public ResponseEntity<?> deleteCompteById(@RequestParam(value="idToDelete", required = false) Integer id) {
+//		System.out.println(id);
+//		daoCompte.deleteCompteById(id);
+//		return new ResponseEntity<String>("Compte n°" + id + " supprimmé avec succès", HttpStatus.I_AM_A_TEAPOT);
+//	}
+	
+//	VERSION avec l'id du compte à supprimmer en bout d'url sur la route
+	@DeleteMapping("/{idToDelete}")
+	public ResponseEntity<?> deleteCompteById(@PathVariable(value = "idToDelete") Integer id) {
+		System.out.println(id);
+		daoCompte.deleteCompteById(id);
+		return new ResponseEntity<String>("Compte n°" + id + " supprimmé avec succès", HttpStatus.I_AM_A_TEAPOT);
 	}
 }

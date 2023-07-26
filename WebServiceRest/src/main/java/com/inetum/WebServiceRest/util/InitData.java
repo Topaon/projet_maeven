@@ -16,7 +16,7 @@ public class InitData {
 	
 	@PostConstruct
 	public void initData() {
-		daoCompte.addCompte(new Compte(null, "Compte 1", 10.0));
+		daoCompte.addCompte(new Compte(null, "Compte 1", 10d));
 		daoCompte.addCompte(new Compte(null, "Compte 2", 20.0));
 		daoCompte.addCompte(new Compte(null, "Compte 3", 278.0));
 		daoCompte.addCompte(new Compte(null, "Compte 4", 9.0));
@@ -24,7 +24,7 @@ public class InitData {
 		daoCompte.addCompte(new Compte(null, "Compte 6", 58.0));
 		daoCompte.addCompte(new Compte(null, "Compte 7", 657.0));
 		daoCompte.addCompte(new Compte(null, "Compte 8", 7.0));
-		daoCompte.addCompte(new Compte(null, "Compte 9", 913.0));
+		daoCompte.addCompte(new Compte(null, "Compte 9", 913d));
 		daoCompte.addCompte(new Compte(null, "Compte 10", 73.0));
 	}
 }

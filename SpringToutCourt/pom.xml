@@ -8,7 +8,8 @@
 	<name>SpringToutCourt</name>
 	<description>Application Spring sans SpringBoot</description>
 	<properties>
-		<maven.compiler.release>17</maven.compiler.release>
+		<maven.compiler.source>17</maven.compiler.source>
+	  	<maven.compiler.target>17</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -26,7 +27,14 @@
 		    <scope>provided</scope>
 		    <version>1.18.28</version>
 		</dependency>
-	</dependencies>
+		<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+		<dependency>
+		    <groupId>javax.annotation</groupId>
+		    <artifactId>javax.annotation-api</artifactId>
+		    <version>1.3.2</version>
+		</dependency>
+
+		</dependencies>
 
 	<build>
 		

@@ -1,7 +1,11 @@
 package com.inetum.SpringToutCourt;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.sql.DataSource;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,7 +14,7 @@ import com.inetum.SpringToutCourt.blague.PresentateurBlague;
 public class SpringToutCourtApplication {
 
 	public static void main(String[] args) {
-		testCartes(7);
+		testDataSource();
 	}
 	
 	public static void testSpring() {
@@ -26,6 +30,21 @@ public class SpringToutCourtApplication {
 		System.out.println(pb.presenterBlague());
 		// Grace à Spring, toutes les instances des classes nécessaires sont déjà créées 
 		// et référenciées entre elles (ce qu'on appelle l'auto-injection)
+	}
+	
+	public static void testDataSource() {
+		AnnotationConfigApplicationContext springContext = new 
+				AnnotationConfigApplicationContext(DataSourceConfig.class);
+		DataSource ds = (DataSource) springContext.getBean("myDataSource");
+		
+		try {
+			Connection cn = ds.getConnection();
+			System.out.println("Connection ouverte = " + cn.toString());
+			cn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		springContext.close();
 	}
 	
 	public static void testRnd() {

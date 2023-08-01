@@ -17,6 +17,6 @@ public class PresentateurBlagueImpl implements PresentateurBlague {
 	
 	@Override
 	public String presenterBlague() {
-		return gbpd.getBlague();
+		return gbd.getBlague();
 	}
 }

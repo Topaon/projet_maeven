@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Component
-//@Profile("drole") // choix au démarrage
+@Component // On peut choisir un id avec @Component("monId"), par défaut c'est le nom de la classe commençant par une minuscule
+//@Profile("drole") // choix au démarrage avec System.setProperty("spring.profiles.active", "V1,eventuelProfilComplementaire");
 @Qualifier("drole") // les deux sont créé, on choisi au @Autowired, dans la classe qui utilise ce composant Spring
 public class GenerateurBlagueDrole implements GenerateurBlague {
 	

@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TpSpringApplication {
 
 	public static void main(String[] args) {
-		System.setProperty("spring.profiles.active", "oracle,init");
+		System.setProperty("spring.profiles.active", "init");
 		SpringApplication.run(TpSpringApplication.class, args);
 		System.out.println("Application lancée à l'url suivante : http://localhost:8080/TpSpring");
 	}

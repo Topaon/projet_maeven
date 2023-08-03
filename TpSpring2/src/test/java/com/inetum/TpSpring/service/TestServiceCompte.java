@@ -1,6 +1,7 @@
 package com.inetum.TpSpring.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -19,53 +20,47 @@ public class TestServiceCompte {
 	@Autowired
 	private ServiceCompte serviceCompte;
 	
-	
+	@Test
 	public void testTransfert() {
-		Compte cptA = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 1", null, 50.0)));
-		Compte cptB = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 2", null, 100.0)));
+		Compte cptA = serviceCompte.saveOrUpdate((new Compte(null, "Compte 1", null, 50.0)));
+		Compte cptB = serviceCompte.saveOrUpdate((new Compte(null, "Compte 2", null, 100.0)));
 
 		Compte cptAApres;
 		Compte cptBApres;
 		
 		serviceCompte.transferer(20d, cptB.getId(), cptA.getId(), "Remboursement voyage Angleterre");
 		
-		cptAApres = serviceCompte.findCompteWithid(cptA.getId());
-		cptBApres = serviceCompte.findCompteWithid(cptB.getId());
+		cptAApres = serviceCompte.searchById(cptA.getId());
+		cptBApres = serviceCompte.searchById(cptB.getId());
 		
 		assertEquals(cptAApres.getSolde(), 70.0);
 		assertEquals(cptBApres.getSolde(), 80.0);
 		
-		log.trace("Solde du compte A avant transfert : " + cptA.getSolde() + " et après : " + cptAApres.getSolde());
-		log.trace("Solde du compte B avant transfert : " + cptB.getSolde() + " et après : " + cptBApres.getSolde());
-		
 	}
 	
-	
+	// @Test // marche mais génère des erreurs (voulues) qui polluent le log
 	public void testMauvaisTransfert() {
-		Compte cptA = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 1", null, 50.0)));
-		Compte cptB = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 2", null, 100.0)));
+		Compte cptA = serviceCompte.saveOrUpdate((new Compte(null, "Compte 1", null, 50.0)));
+		Compte cptB = serviceCompte.saveOrUpdate((new Compte(null, "Compte 2", null, 100.0)));
 		
 		try {
 			serviceCompte.transferer(20d, cptB.getId(), -2l, "Remboursement voyage Angleterre"); // Transfert depuis un compte qui n'existe pas
 		} catch (Exception e) {
 			// Exception normale en cas d'erreur
-			log.trace("Le compte n'existe pas c'est le but du test : " + e.getMessage());
+//			log.trace("Le compte n'existe pas c'est le but du test : " + e.getMessage());
 		}
 		
-		Compte cptAApres = serviceCompte.findCompteWithid(cptA.getId());
-		Compte cptBApres = serviceCompte.findCompteWithid(cptB.getId());
-		
-		log.trace("Solde du compte A avant transfert : " + cptA.getSolde() + " et après : " + cptAApres.getSolde());
-		log.trace("Solde du compte B avant transfert : " + cptB.getSolde() + " et après : " + cptBApres.getSolde());
+		Compte cptAApres = serviceCompte.searchById(cptA.getId());
+		Compte cptBApres = serviceCompte.searchById(cptB.getId());
 		
 		assertEquals(cptA.getSolde(), cptAApres.getSolde());
 		assertEquals(cptB.getSolde(), cptBApres.getSolde());	
 	}
 	
-	
+	@Test
 	public void testOperations() {
-		Compte cptC = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 3", null, 100.0)));
-		Compte cptD = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 4", null, 100.0)));
+		Compte cptC = serviceCompte.saveOrUpdate((new Compte(null, "Compte 3", null, 100.0)));
+		Compte cptD = serviceCompte.saveOrUpdate((new Compte(null, "Compte 4", null, 100.0)));
 		
 		serviceCompte.transferer(20d, cptC.getId(), cptD.getId(), "Jap mardi soir");
 		serviceCompte.transferer(10d, cptC.getId(), cptD.getId(), "Macdo");
@@ -78,8 +73,8 @@ public class TestServiceCompte {
 	
 	@Test
 	public void testTousLesComptes() {
-		Compte cptC = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 3", null, 100.0)));
-		Compte cptD = serviceCompte.sauvegarderCompte((new Compte(null, "Compte 4", null, 100.0)));
+		Compte cptC = serviceCompte.saveOrUpdate((new Compte(null, "Compte 3", null, 100.0)));
+		Compte cptD = serviceCompte.saveOrUpdate((new Compte(null, "Compte 4", null, 100.0)));
 		for(Compte c : serviceCompte.trouverTousLesComptes()) {
 			log.trace(c.toString());
 		}

@@ -5,11 +5,13 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.inetum.TpSpring.dao.DaoCompte;
 import com.inetum.TpSpring.dao.DaoOperation;
+import com.inetum.TpSpring.dto.CompteDto;
 import com.inetum.TpSpring.entity.Compte;
 import com.inetum.TpSpring.entity.Operation;
 import com.inetum.TpSpring.exception.BankException;
@@ -19,9 +21,15 @@ import com.inetum.TpSpring.exception.BankException;
 			   //     Ainsi en cas de rollback toutes les opérations sont annulées.
 			   //	  Si aucune transaction n'est créée, chaque opération entrainera la création et le commit d'une transaction dans les
 			   //	  sous-services, et en cas de problème les autres modifications seront déjà commit, impossible de revenir en arrière
-public class ServiceCompteImpl implements ServiceCompte {
-	
+public class ServiceCompteImpl extends AbstractGenericService<Compte, Long, CompteDto> implements ServiceCompte {
+
+	public CrudRepository<Compte, Long> getDao() {
+		return this.daoCompte;
+	}
+
 	Logger logger = LoggerFactory.getLogger(ServiceCompteImpl.class);
+	
+	
 	
 	@Autowired
 	private DaoCompte daoCompte;
@@ -74,7 +82,7 @@ public class ServiceCompteImpl implements ServiceCompte {
 	}
 
 	@Override
-	public Compte sauvegarderCompte(Compte compte) {
+	public Compte saveOrUpdate(Compte compte) {
 		return daoCompte.save(compte);
 	}
 
@@ -84,7 +92,7 @@ public class ServiceCompteImpl implements ServiceCompte {
 	}
 
 	@Override
-	public boolean verifierExistanceCompte(Long numeroCompte) {
+	public boolean existById(Long numeroCompte) {
 		return daoCompte.existsById(numeroCompte);
 	}
 
@@ -95,7 +103,7 @@ public class ServiceCompteImpl implements ServiceCompte {
 	}
 
 	@Override
-	public Compte findCompteWithid(Long numeroCompte) {
+	public Compte searchById(Long numeroCompte) {
 		return daoCompte.findById(numeroCompte).orElse(null);
 	}
 

@@ -28,7 +28,7 @@ public class CompteRestCtrl {
 	
 	@GetMapping("")
 	public List<CompteDto> getAllCustomer() {
-		return DtoGenericConverter.map((serviceCompte.trouverTousLesComptes()), CompteDto.class);
+		return DtoGenericConverter.map((serviceCompte.searchAll()), CompteDto.class);
 	}
 	
 	@GetMapping("/{numeroCompte}") // s'il n'y a qu'un seul parametre le 'value=' est facultatif
@@ -49,7 +49,7 @@ public class CompteRestCtrl {
 	
 	@DeleteMapping("/{idToDelete}")
 	public ResponseEntity<?> deleteCompteById(@PathVariable(value = "idToDelete") Long id ){
-		serviceCompte.supprimerCompte(id);
+		serviceCompte.deleteById(id);
 		return new ResponseEntity<String>("Compte N°" + id + " supprimé avec succès", HttpStatus.I_AM_A_TEAPOT);
 	}
 }

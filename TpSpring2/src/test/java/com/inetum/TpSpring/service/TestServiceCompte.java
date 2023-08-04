@@ -8,11 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.inetum.TpSpring.entity.Compte;
 import com.inetum.TpSpring.entity.Operation;
 
 @SpringBootTest
+@ActiveProfiles({"oracle"})
 public class TestServiceCompte {
 
 	Logger log = LoggerFactory.getLogger(TestServiceCompte.class);
@@ -75,7 +77,7 @@ public class TestServiceCompte {
 	public void testTousLesComptes() {
 		Compte cptC = serviceCompte.saveOrUpdate((new Compte(null, "Compte 3", null, 100.0)));
 		Compte cptD = serviceCompte.saveOrUpdate((new Compte(null, "Compte 4", null, 100.0)));
-		for(Compte c : serviceCompte.trouverTousLesComptes()) {
+		for(Compte c : serviceCompte.searchAll()) {
 			log.trace(c.toString());
 		}
 	}

@@ -87,7 +87,7 @@ public class ServiceCompteImpl extends AbstractGenericService<Compte, Long, Comp
 	}
 
 	@Override
-	public void supprimerCompte(Long numeroCompte) {
+	public void deleteById(Long numeroCompte) {
 		daoCompte.delete(daoCompte.findById(numeroCompte).orElse(null));
 	}
 
@@ -108,7 +108,7 @@ public class ServiceCompteImpl extends AbstractGenericService<Compte, Long, Comp
 	}
 
 	@Override
-	public List<Compte> trouverTousLesComptes() {
+	public List<Compte> searchAll() {
 		return daoCompte.findAll();
 	}
 }

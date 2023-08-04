@@ -3,6 +3,7 @@ package com.inetum.TpSpring.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -10,6 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -31,7 +37,7 @@ public class Customer {
 	private String lastname;
 	private String password;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "owner")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "owner", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<Compte> comptes;
 	
@@ -49,7 +55,4 @@ public class Customer {
 		return "Customer [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", password=" + password
 				+ "]";
 	}
-
-
-
 }

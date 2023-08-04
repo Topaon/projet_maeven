@@ -15,11 +15,11 @@ public interface ServiceCompte extends GenericService<Compte, Long, CompteDto>{
 	
 	// Méthodes déléguées aux DAOs, pour ne pas passer directement des services web aux dao (respect des couches web/métier/dao)
 	List<Compte> rechercherComptesDuClient(Long numeroCustomer);
-	void supprimerCompte(Long numeroCompte);
-	boolean existById(Long numeroCompte);
-	List<Compte> trouverTousLesComptes();
 	
 	// On va rendre generic ces méthodes
+//	void deleteById(Long numeroCompte);
+//	boolean existById(Long numeroCompte);
+//	List<Compte> searchAll();
 //	public Compte searchById(Long numeroCompte);
 //	Compte saveOrUpdate(Compte compte);
 }

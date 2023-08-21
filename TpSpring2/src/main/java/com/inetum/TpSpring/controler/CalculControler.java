@@ -1,4 +1,4 @@
-package com.inetum.TpSpring.constroller;
+package com.inetum.TpSpring.controler;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/calcul")
-public class CalculController {
+public class CalculControler {
 
 	@RequestMapping("/saisieHt")
 	public String versSaisieTva(Model model) {

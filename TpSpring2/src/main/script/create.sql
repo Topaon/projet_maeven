@@ -1552,3 +1552,18 @@ create table customer (id bigint not null auto_increment, firstname varchar(255)
 create table operation (id bigint not null auto_increment, libele varchar(255), montant double precision, sens varchar(255), compte bigint, primary key (id)) engine=InnoDB;
 alter table compte add constraint FKrio5vx6ke6wxxvkbo006gotys foreign key (titulaire_du_compte) references customer (id);
 alter table operation add constraint FK5o12n0rda285c7agc6y4apmuy foreign key (compte) references compte (id);
+create table compte (id bigint not null auto_increment, label varchar(255), solde double precision, titulaire_du_compte bigint, primary key (id)) engine=InnoDB;
+create table customer (id bigint not null auto_increment, firstname varchar(255), lastname varchar(255), password varchar(255), primary key (id)) engine=InnoDB;
+create table operation (id bigint not null auto_increment, libele varchar(255), montant double precision, sens varchar(255), compte bigint, primary key (id)) engine=InnoDB;
+alter table compte add constraint FKrio5vx6ke6wxxvkbo006gotys foreign key (titulaire_du_compte) references customer (id);
+alter table operation add constraint FK5o12n0rda285c7agc6y4apmuy foreign key (compte) references compte (id);
+create table compte (id bigint not null auto_increment, label varchar(255), solde double precision, titulaire_du_compte bigint, primary key (id)) engine=InnoDB;
+create table customer (id bigint not null auto_increment, firstname varchar(255), lastname varchar(255), password varchar(255), primary key (id)) engine=InnoDB;
+create table operation (id bigint not null auto_increment, libele varchar(255), montant double precision, sens varchar(255), compte bigint, primary key (id)) engine=InnoDB;
+alter table compte add constraint FKrio5vx6ke6wxxvkbo006gotys foreign key (titulaire_du_compte) references customer (id);
+alter table operation add constraint FK5o12n0rda285c7agc6y4apmuy foreign key (compte) references compte (id);
+create table compte (id bigint not null auto_increment, label varchar(255), solde double precision, titulaire_du_compte bigint, primary key (id)) engine=InnoDB;
+create table customer (id bigint not null auto_increment, firstname varchar(255), lastname varchar(255), password varchar(255), primary key (id)) engine=InnoDB;
+create table operation (id bigint not null auto_increment, libele varchar(255), montant double precision, sens varchar(255), compte bigint, primary key (id)) engine=InnoDB;
+alter table compte add constraint FKrio5vx6ke6wxxvkbo006gotys foreign key (titulaire_du_compte) references customer (id);
+alter table operation add constraint FK5o12n0rda285c7agc6y4apmuy foreign key (compte) references compte (id);

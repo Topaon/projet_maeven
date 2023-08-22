@@ -37,5 +37,4 @@ function rechercherComptesSelonSoldeMini(){
 			(row.insertCell(2)).innerHTML = compte.solde;
 		}
 	});
-	
 }

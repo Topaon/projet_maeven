@@ -18,8 +18,6 @@ public class YgoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(YgoApplication.class, args);
 		System.out.println("http://localhost:8080/ygo");
-		
-		MilieuYgoJson();
 	}
 	
 	public static void MilieuYgoJson() {

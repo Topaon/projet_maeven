@@ -24,5 +24,4 @@ public class GenericConverter {
 			   .map((source)->map(source,targetClass))
 			   .toList();
 	}
-
 }

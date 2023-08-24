@@ -18,6 +18,7 @@ public class YgoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(YgoApplication.class, args);
 		System.out.println("http://localhost:8080/ygo");
+		DebutYgoJson();
 	}
 	
 	public static void MilieuYgoJson() {
@@ -47,11 +48,10 @@ public class YgoApplication {
 				listArchetypeWithoutDuplicates.add((String) j.get("archetype"));
 			}
 			for(String i:listArchetypeWithoutDuplicates) {
-				System.out.println(i);
+				System.out.println("\"" + i + "\",");
 			}
 			System.out.println(listArchetypeWithoutDuplicates.size());
 		} catch (IOException | ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

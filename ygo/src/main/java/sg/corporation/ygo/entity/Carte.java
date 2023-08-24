@@ -10,8 +10,6 @@ public class Carte {
 	private Long id;
 	private String nom;
 	
-	
-	
 	@Override
 	public String toString() {
 		return "Carte [id=" + id + ", nom=" + nom + "]";

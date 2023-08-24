@@ -6,14 +6,13 @@
 <link rel="stylesheet" href="index.css">
 <script src="ygoImage.js"></script>
 <script src="my_ajax_util.js"></script>
+<script src="initData.js"></script>
 </head>
 <body>
 	<h1>Deck builder</h1>
-<!--	<table>-->
-<!--	   <tbody id="table_body">-->
-		   
-<!--	   </tbody>-->
-<!--	</table>-->
+	<select id="archetype-select" onchange="filtreArchetype()">
+	  <option value="">Archetype</option>
+	</select>
 	<div id="cards_container">
 		<div id="database_container">
 			<div id="table_body">
@@ -22,7 +21,7 @@
 		</div>
 		
 		<div id="deck_container">
-			
+		
 		</div>
 	</div>
 	

@@ -28,5 +28,4 @@ public class ApiError {
 		this.message = message;
 		this.timestamp = LocalDateTime.now();
 	}
-	
 }

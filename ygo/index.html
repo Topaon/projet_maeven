@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/index.css">
+<script src="./js/ygoImage.js"></script>
+<script src="./js/my_ajax_util.js"></script>
+<script src="./js/initData.js"></script>
+</head>
+<body>
+	<h1>Deck builder</h1>
+<!-- 	<div id="carre_rouge" onclick="click_carre()"></div> -->
+	<select id="archetype-select" onchange="filtreArchetype()" size="1">
+	  <option value="">Archetype</option>
+	</select>
+	<div id="cards_container">
+		<div id="database_container">
+			<div id="table_body" onload="clik_carre()">
+				
+			</div>
+		</div>
+
+		<div id="deck_container">
+		
+		</div>
+			
+		<div id="detail_container">
+		
+		</div>
+	</div>
+</body>
+</html>

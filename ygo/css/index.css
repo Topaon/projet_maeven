@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import "animation.css";
+
+body{
+	background-color: white;
+}
+
+@media (max-width : 600px){
+	body{
+		background-color: black;
+	}
+}
+
+#cards_container{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+#database_container{
+	background-color: red;
+	width: 30%;
+	height: 500px;
+	overflow: auto;
+}
+
+#deck_container{
+	background-color: blue;
+	width: 30%;
+}
+
+#detail_container{
+	background-color: green;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#desc_text{
+	margin: 5%;
+	text-justify: inter-word; 
+}
+
+#carre_rouge{
+	height: 50px;
+	width: 50px;
+	background-color: red;
+}
+
+.img_slot{
+	margin: 5px;
+	width: 84px;
+	height: 123px;
+}
+
+.img_slot:hover{
+	animation: tremblement 0.2s;
+}
+
+.img_detail{
+	margin: 10px;
+	width: 168px;
+	height: 246px;
+}

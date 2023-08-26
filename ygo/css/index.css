@@ -52,10 +52,7 @@ body{
 	margin: 5px;
 	width: 84px;
 	height: 123px;
-}
-
-.img_slot:hover{
-	animation: tremblement 0.2s;
+	cursor: pointer;
 }
 
 .img_detail{

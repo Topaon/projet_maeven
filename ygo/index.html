@@ -7,13 +7,15 @@
 <script src="./js/ygoImage.js"></script>
 <script src="./js/my_ajax_util.js"></script>
 <script src="./js/initData.js"></script>
+<script src="./js/animation.js"></script>
 </head>
 <body>
 	<h1>Deck builder</h1>
-<!-- 	<div id="carre_rouge" onclick="click_carre()"></div> -->
+ 	<!-- <div id="carre_rouge" onclick="click_carre()"></div> -->
 	<select id="archetype-select" onchange="filtreArchetype()" size="1">
 	  <option value="">Archetype</option>
-	</select>
+	</select> <br/>
+	Nombre de cartes dans le deck : <span id="deckSize"></span>
 	<div id="cards_container">
 		<div id="database_container">
 			<div id="table_body" onload="clik_carre()">

@@ -18,5 +18,32 @@
     transform: translateX(0px) translateY(0px);
   }
 }
+@keyframes add_to_deck {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes created_in_deck {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes removed_from_deck {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
 
 /*# sourceMappingURL=animation.css.map */

@@ -4,7 +4,18 @@ window.onload=function(){
 }
 
 function click_carre(){
-	console.log("click");
+	var test = "deck_46846425"
+	console.log(test.slice(0,5));
+}
+
+function assignId(idCard){
+	if(document.getElementById("deck_1_" + idCard) === null){
+		return "deck_1_" + idCard;
+	} else if(document.getElementById("deck_2_" + idCard) === null){
+		return "deck_2_" + idCard;
+	} else {
+		return "deck_3_" + idCard;
+	}
 }
 
 function majDeckSize(){
@@ -18,6 +29,24 @@ function testThreeCopies(carte){
 		return false;
 	} else {
 		return true;
+	}
+}
+
+function countCopiesInDeck(carte){
+	var nbCopies = 0;
+	var twoOrMoreCopies = deck.filter((item, index) => deck.indexOf(item) !== index);
+	var threeCopies = twoOrMoreCopies.filter((item, index) => twoOrMoreCopies.indexOf(item) !== index);
+	if(threeCopies.indexOf(carte) !== -1){
+		nbCopies = 3;
+		return nbCopies;
+	} else if(twoOrMoreCopies.indexOf(carte) !== -1){
+		nbCopies = 2;
+		return false;
+	} else if(deck.indexOf(carte) !== -1){
+		nbCopies = 1;
+		return nbCopies;
+	} else {
+		return nbCopies;
 	}
 }
 
@@ -75,31 +104,30 @@ function getImages(filtre){
 
 function addToDeck(loadedId){
 	let carte = loadedCards[loadedId];
-	if(deckSize<40 && testThreeCopies(carte) === false){
+	if(deckSize<40 && countCopiesInDeck(carte) < 3){
 		let bodyElt = document.getElementById("deck_container");
 		var img = document.createElement("img");
 		img.src = carte.card_images[0].image_url;
-		img.id = carte.id;
-		img.name = "deck_" + img.id;
+		img.id = assignId(carte.id);
 		img.className = "img_slot";
-		img.setAttribute("oncontextmenu", "removeFromDeck(\"" + img.name + "\");return false;");
+		img.setAttribute("oncontextmenu", "removeFromDeck(\"" + img.id + "\");return false;");
 		img.setAttribute("onclick", "showDetail(\"" + img.id + "\")");
 		img.style.animation = "created_in_deck 0.1s";
 		bodyElt.appendChild(img);
 		deck.push(carte);
 
-		addCardAnimation(img.id);
+		addCardAnimation(loadedId);
 		deckSize += 1;
 		majDeckSize();
 	}
 }
 
-function showDetail(loadedId){
+function showDetail(cardToShow){
 	let carte;
-	if(loadedCards[loadedId]){
-		carte = loadedCards[loadedId];
+	if(cardToShow.slice(0,5) === "deck_"){
+		carte = deck.filter((item, index) => item.id === Number(cardToShow.split("_")[2]))[0];
 	} else {
-		carte = deck.filter((item, index) => item.id === Number(loadedId))[0];
+		carte = loadedCards[cardToShow];
 	}
 	let bodyElt = document.getElementById("detail_container");
 	bodyElt.innerHTML = "";
@@ -117,10 +145,11 @@ function showDetail(loadedId){
 }
 
 function removeFromDeck(id){
-	let bodyElt = document.getElementsByName(id)[0];
+	let bodyElt = document.getElementById(id);
 	bodyElt.style.animation = "removed_from_deck 0.04s";
 	setTimeout(function(){bodyElt.remove()}, 40);
-	deck.splice(deck.indexOf(bodyElt.id), 1);
+	carte = deck.filter((item, index) => item.id === Number(id.split("_")[2]))
+	deck.splice(deck.indexOf(carte[0]), 1);
 
 	deckSize -= 1;
 	majDeckSize();

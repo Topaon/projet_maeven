@@ -29,6 +29,11 @@ body{
 	width: 30%;
 }
 
+#extra_deck_container{
+	background-color: yellow;
+	width: 30%;
+}
+
 #detail_container{
 	background-color: green;
 	width: 30%;

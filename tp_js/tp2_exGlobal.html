@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex Global</title>
+    <script>
+        var a = {ine: 1230, nom: "ALLON", prenom: "LEVY", specialite: "Techniques Informatiques et Numériques", moyenne: 13, mention: "Bien"}
+        var b = {ine: 1231, nom: "BACARD", prenom: "HUGO", specialite: "Conception & Développement Informatique", moyenne: 12, mention: "A Bien"}
+        var c = {ine: 1232, nom: "BAKER", prenom: "MATTHEW", specialite: "Informatique Pour les Sciences", moyenne: 14, mention: "Bien"}
+        var d = {ine: 1233, nom: "BALWE", prenom: "CHETAN", specialite: "Bioinformatique", moyenne: 18, mention: "Excellent"}
+        var e = {ine: 1234, nom: "BELAIR", prenom: "LUC", specialite: "Informatique de Gestion", moyenne: 13, mention: "A Bien"}
+
+        var listeResultat = [a,b,c,d,e]
+
+        function getAverage(){
+            var formulaire = document.getElementById("formulaire_1")
+            var studentId = Number(formulaire.elements["studentId"].value)
+            var student = listeResultat.filter((item, index) => item.ine === studentId)
+            document.getElementById("average").innerHTML = student[0].moyenne
+        }
+    </script>
+</head>
+<body>
+    <form id="formulaire_1">
+        Entrez votre id : <input type="text" id="inputStudentId" name="studentId"/><br/>
+        <button onclick="getAverage()" type="button">Valider</button>
+    </form>
+ 
+    <div id="average"></div>
+</body>
+</html>

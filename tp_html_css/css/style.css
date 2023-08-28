@@ -1,0 +1,23 @@
+@import "theme.css";
+
+tr:nth-child(2n) td{
+    background-color: blueviolet;
+}
+
+tr:nth-child(2n+1) td{
+    background-color: burlywood;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+    margin: 5px
+}
+
+button{
+    color: red
+}
+
+button:hover{
+    color: blueviolet
+}

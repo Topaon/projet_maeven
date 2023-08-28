@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 16</title>
+    <script>
+        function algeriaFlag(){
+            var bodyElt = document.getElementById("flag")
+            bodyElt.src = "./assets/algeriaFlag.png"
+        }
+        function franceFlag(){
+            var bodyElt = document.getElementById("flag")
+            bodyElt.src = "./assets/franceFlag.png"
+        }
+        function italyFlag(){
+            var bodyElt = document.getElementById("flag")
+            bodyElt.src = "./assets/italyFlag.png"
+        }
+    </script>
+</head>
+<body>
+    <img id="flag" src="./assets/default.png" style="height: 300px; margin: 20px"/>
+
+    </div>
+    <div style="width: 200px; display: flex; flex-direction: row; justify-content: space-around;">
+            <button onclick="algeriaFlag()" style="border: 1px solid">Algérie</button>
+            <button onclick="franceFlag()" style="border: 1px solid">France</button>
+            <button onclick="italyFlag()" style="border: 1px solid">Italie</button>
+    </div>
+</body>
+</html>

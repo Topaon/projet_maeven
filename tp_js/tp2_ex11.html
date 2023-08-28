@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11</title>
+    <script>
+        function getFormValues(){
+            var bodyElt = document.getElementById("formulaire_1")
+            var name = bodyElt.elements["inputName"].value
+            var age = bodyElt.elements["inputAge"].value
+            var email = bodyElt.elements["inputEmail"].value
+            if(name && age && email){
+                alert("Bonjour " + name + ", vous avez " + age + " ans.")
+            } else {
+                alert("Veuillez finir de remplir le formulaire")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="formulaire_1">
+        Name = <input type="text" name="inputName" /><br/>
+        Age = <input type="text" name="inputAge" /><br/>
+        Email = <input type="text" name="inputEmail" /><br/>
+        <button onclick="getFormValues()">Valider</button>
+    </form>
+</body>
+</html>

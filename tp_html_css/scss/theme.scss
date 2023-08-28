@@ -1,0 +1,33 @@
+$theme: rgb(2, 189, 33);
+
+@mixin nice-border($theme){
+    border: 3px solid $theme;
+    background-color: red;
+}
+
+h1{
+    @include nice-border(blue);
+    color: $theme;
+}
+
+p{
+    color: $theme;
+}
+
+a{
+    color: $theme;
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.5;
+    transition: 0.1s linear;
+}
+
+label{
+    color: $theme;
+}
+
+button{
+    color: $theme;
+}

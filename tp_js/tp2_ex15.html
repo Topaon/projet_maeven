@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 15</title>
+    <script>
+        function colorInRed(){
+            var bodyElt = document.getElementById("carre")
+            bodyElt.style.backgroundColor = "lightcoral"
+        }
+        function colorInBlue(){
+            var bodyElt = document.getElementById("carre")
+            bodyElt.style.backgroundColor = "lightblue"
+        }
+        function colorInGreen(){
+            var bodyElt = document.getElementById("carre")
+            bodyElt.style.backgroundColor = "lightgreen"
+        }
+    </script>
+</head>
+<body>
+    <div id="carre" style="height: 200px; width: 200px; border: 1px solid">
+
+    </div>
+    <div style="width: 200px; display: flex; flex-direction: row; justify-content: space-around;">
+            <button onclick="colorInRed()" style="border: 1px solid; background-color: lightcoral;">Rouge</button>
+            <button onclick="colorInBlue()" style="border: 1px solid; background-color: lightblue;">Bleu</button>
+            <button onclick="colorInGreen()" style="border: 1px solid; background-color: lightgreen;">Vert</button>
+    </div>
+</body>
+</html>

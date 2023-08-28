@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Exercice 1
+     function ex1(){
+        console.log("Bonjour tout le monde!")
+     }   
+
+     // Exercice 2
+     function ex2(nom, age){
+        console.log(nom + " a " + age + " ans.")
+     }
+    
+    // Exercice 3
+    function ex3(rayon, hauteur){
+        console.log((rayon*rayon * hauteur * Math.PI)/3)
+    }
+
+    // Exercice 4
+    function ex4(){
+        var tab = ["Simon", 26, "marié"]
+        console.log("Je m'appelle " + tab[0] + ", j'ai " + tab[1] + " ans et je suis " + tab[2])
+    }
+
+    // Exercice 5
+    function ex5_1(){
+        for(var x = 0; x<5; x++){
+            document.write("*")
+        }
+    }
+
+    function ex5_2(){
+        for(var x = 0; x<4; x++){
+            for(var y = 0; y<10; y++){
+                document.write("*")
+            }
+            document.write("<br/>")
+        }
+    }
+
+    // Exercice 6
+    function ex6(){
+        var a = {ine: 1230, nom: "ALLON", prenom: "LEVY", specialite: "Techniques Informatiques et Numériques", moyenne: 13, mention: "Bien"}
+        var b = {ine: 1231, nom: "BACARD", prenom: "HUGO", specialite: "Conception & Développement Informatique", moyenne: 12, mention: "A Bien"}
+        var c = {ine: 1232, nom: "BAKER", prenom: "MATTHEW", specialite: "Informatique Pour les Sciences", moyenne: 14, mention: "Bien"}
+        var d = {ine: 1233, nom: "BALWE", prenom: "CHETAN", specialite: "Bioinformatique", moyenne: 18, mention: "Excellent"}
+        var e = {ine: 1234, nom: "BELAIR", prenom: "LUC", specialite: "Informatique de Gestion", moyenne: 13, mention: "A Bien"}
+
+        var listeResultat = [a,b,c,d,e]
+
+        console.log(listeResultat[1])
+
+        for(x in listeResultat){
+            console.log(listeResultat[x])
+        }
+    }
+
+    // Exercice 7
+    function ex7(){
+        var bonNumero = Math.ceil(Math.random() * 10)
+        var tirage = 0;
+        var essai = 0;
+        while(bonNumero !== Math.ceil(Math.random() * 10)){
+            essai += 1;
+        }
+        document.write("Nombre recherché : " + bonNumero)
+        document.write("<br/>")
+        document.write("Nombre d'essais : " + essai)
+    }
+
+    // Exercice 8
+    function ex8(){
+        document.write("<h1>Cliquez sur le bouton pour calculer la surface de votre cercle :</h1><br/>")
+        bodyElt = document.createElement("button")
+        bodyElt.setAttribute("onclick", "calcul()");	
+        bodyElt.innerHTML = "Lancer la fonction"
+        document.getElementsByTagName("body")[0].appendChild(bodyElt)
+    }
+    
+    function calcul(){
+        var rayon = prompt("Entrez le rayon du cercle : ")
+        if(rayon !== null){
+            alert("La surface est : " + Math.PI * rayon * rayon)
+        }
+    }
+    // Exercice 9
+    function ex9(){
+        document.write("<h1>Switch et l'objet Date :</h1><br/>")
+        bodyElt = document.createElement("button")
+        bodyElt.setAttribute("onclick", "dateJour()");	
+        bodyElt.innerHTML = "Lancer la fonction"
+        document.getElementsByTagName("body")[0].appendChild(bodyElt)
+    }
+
+    function dateJour(){
+        var semaine = [
+            "lundi",
+            "mardi",
+            "mercredi",
+            "jeudi",
+            "vendredi",
+            "samedi",
+            "dimanche"
+        ]
+        alert("Nous sommes " + semaine[new Date().getDay()])
+    }
+
+    // Exercice 10
+    function ex10(){
+        var nb = prompt("Entrez un nombre : ")
+        if(nb !== null){
+            var tableNb = []
+            for(var x=1; x<=10; x++){
+                tableNb.push(nb*x)
+            }
+            console.log(tableNb)
+        }
+    }
+
+    ex1()
+
+    </script>
+</body>
+</html>

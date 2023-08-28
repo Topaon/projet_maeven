@@ -1,0 +1,29 @@
+h1 {
+  border: 3px solid blue;
+  background-color: red;
+  color: rgb(2, 189, 33);
+}
+
+p {
+  color: rgb(2, 189, 33);
+}
+
+a {
+  color: rgb(2, 189, 33);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+  transition: 0.1s linear;
+}
+
+label {
+  color: rgb(2, 189, 33);
+}
+
+button {
+  color: rgb(2, 189, 33);
+}
+
+/*# sourceMappingURL=theme.css.map */

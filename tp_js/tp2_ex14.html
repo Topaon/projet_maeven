@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 14</title>
+    <script>
+        function getFromValues(){
+            var bodyElt = document.getElementById("formulaire_1")
+            var initialValue = bodyElt.elements["initialValue"].value
+            var taux = Number(bodyElt.elements["taux"].value)
+
+            if(initialValue && taux){
+                alert(initialValue * taux)
+            } else {
+                alert("Veuillez renseigner une valeur et la conversion à effectuer")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="formulaire_1">
+        Entrez une somme : <input type="text" name="initialValue"/><br/>
+        <input type="radio" name="taux" value="1.08"/>Euro en dollard<br/>
+        <input type="radio" name="taux" value="0.93"/>Dollard en euro<br/>
+        <button onclick="getFromValues()">Convertir</button>
+    </form>
+</body>
+</html>

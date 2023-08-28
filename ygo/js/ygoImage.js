@@ -1,13 +1,20 @@
 window.onload=function(){
 	initSelect();
 	majDeckSize();
-	getImages("?archetype=@Ignister")
+	getImages("?archetype=@Ignister");
 }
 
 function click_carre(){
-	console.log(deck);
-	console.log(extraDeck);
+	var listToSort = loadedCards;
+
+	console.log(sortByCardType(listToSort));
 }
+
+var loadedCards = [];
+
+var deck = [];
+
+var extraDeck = [];
 
 function assignId(idCard, deckType){
 	if(document.getElementById(deckType + "_1_" + idCard) === null){
@@ -19,20 +26,51 @@ function assignId(idCard, deckType){
 	}
 }
 
+function sortByCardType(cardList){
+
+	sortedCardList = cardList.sort(function(a,b) {
+		
+		switch(a.frameType.split("_")[0]){
+			case "normal": a = 0; break;
+			case "effect": a = 1; break;
+			case "ritual": a = 1.5; break;
+			case "spell": a = 2; break;
+			case "trap": a = 3; break;
+			case "fusion": a = 4; break;
+			case "synchro": a = 5; break;
+			case "xyz": a = 6; break;
+			case "pendulum": a = 7; break;
+			case "link": a = 8; break;
+		}
+
+		switch(b.frameType.split("_")[0]){
+			case "normal": b = 0; break;
+			case "effect": b = 1; break;
+			case "spell": b = 2; break;
+			case "trap": b = 3; break;
+			case "fusion": b = 4; break;
+			case "synchro": b = 5; break;
+			case "xyz": b = 6; break;
+			case "pendulum": b = 7; break;
+			case "link": b = 8; break;
+		}
+		
+		if(a<b){
+			return -1;
+		} else if(a>b){
+			return 1;
+		} else {
+			return 0
+		}
+	})
+
+	return sortedCardList;
+}
+
 function majDeckSize(){
 	document.getElementById("deckSize").innerHTML = deck.length;
 	document.getElementById("extraDeckSize").innerHTML = extraDeck.length;
 }
-
-// function testThreeCopies(carte){
-// 	var twoOrMoreCopies = deck.filter((item, index) => deck.indexOf(item) !== index);
-// 	var threeCopies = twoOrMoreCopies.filter((item, index) => twoOrMoreCopies.indexOf(item) !== index);
-// 	if(threeCopies.indexOf(carte) === -1){
-// 		return false;
-// 	} else {
-// 		return true;
-// 	}
-// }
 
 function countCopiesInDeck(carte, deckType){
 	var carteType = carte.type.split(" ");
@@ -52,16 +90,6 @@ function countCopiesInDeck(carte, deckType){
 		return nbCopies;
 	}
 }
-
-var loadedCards = [];
-
-var deck = [];
-
-var extraDeck = [];
-
-// function noContextMenu(){
-// 	return false;
-// }
 
 function filtreArchetype(){
 	let bodyElt = document.getElementById("archetype-select");
@@ -87,6 +115,7 @@ function initSelect(){
 }
 
 function getImages(filtre){	
+	loadedCards = [];
 	let url = "https://db.ygoprodeck.com/api/v7/cardinfo.php" + filtre;
 	makeAjaxGetRequest(url,function(responseJson){
 		let data = JSON.parse(responseJson).data;

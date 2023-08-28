@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 13</title>
+    <script>
+        function getFromValues(){
+            var bodyElt = document.getElementById("formulaire_1")
+            var rep_1 = bodyElt.elements["img_1"].value
+            var rep_2 = bodyElt.elements["img_2"].value
+            var rep_3 = bodyElt.elements["img_3"].value
+            
+            var nb_bonnes_reponses = 0
+
+            if(rep_1 && rep_2 && rep_3){
+                rep_1 === "renne" ? nb_bonnes_reponses+=1 : nb_bonnes_reponses
+                rep_2 === "poisson" ? nb_bonnes_reponses+=1 : nb_bonnes_reponses
+                rep_3 === "lievre" ? nb_bonnes_reponses+=1 : nb_bonnes_reponses
+                alert("Nombre de bonnes réponses : " + nb_bonnes_reponses)            
+            } else {
+                alert("Il manque des réponses")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="formulaire_1">
+        <table border="1">
+            <tr>
+                <td><img src="assets/renne.jpg" style="height: 100px"/></td>
+                <td>
+                    <input type="radio" name="img_1" value="renne"/>Renne<br/>
+                    <input type="radio" name="img_1" value="poisson"/>Poisson<br/>
+                    <input type="radio" name="img_1" value="lievre"/>Lièvre<br/>
+                    <input type="radio" name="img_1" value="cheval"/>Cheval<br/>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="assets/poisson.jpg" style="height: 100px"/></td>
+                <td>
+                    <input type="radio" name="img_2" value="renne"/>Renne<br/>
+                    <input type="radio" name="img_2" value="poisson"/>Poisson<br/>
+                    <input type="radio" name="img_2" value="lievre"/>Lièvre<br/>
+                    <input type="radio" name="img_2" value="cheval"/>Cheval<br/>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="assets/lievre.jpg" style="height: 100px"/></td>
+                <td>
+                    <input type="radio" name="img_3" value="renne"/>Renne<br/>
+                    <input type="radio" name="img_3" value="poisson"/>Poisson<br/>
+                    <input type="radio" name="img_3" value="lievre"/>Lièvre<br/>
+                    <input type="radio" name="img_3" value="cheval"/>Cheval<br/>
+                </td>
+            </tr>
+        </table>
+        <button onclick="getFromValues()">Envoyer</button>
+    </form>
+</body>
+</html>

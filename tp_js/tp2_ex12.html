@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+    <script>
+        function getFromValues(){
+            var bodyElt = document.getElementById("formulaire_1")
+            var age1 = Number(bodyElt.elements["inputAge1"].value)
+            var age2 = Number(bodyElt.elements["inputAge2"].value)
+            
+            console.log(age1)
+            console.log(age2)
+
+            var operator = document.getElementById("selectOperator").value
+            
+            if(age1 && age2){
+                switch(operator){
+                    case "+": alert(age1 + age2); break
+                    case "-": alert(age1 - age2); break
+                    case "*": alert(age1 * age2); break
+                    case "/": alert(age1 / age2); break
+                }
+            } else {
+                alert("Vous devez remplir tous les champs !")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="formulaire_1">
+        <input type="text" name="inputAge1" />
+        <select id="selectOperator">
+            <option value="+">Plus</option>
+            <option value="-">Moins</option>
+            <option value="*">Fois</option>
+            <option value="/">Que divise</option>
+        </select>
+        <input type="text" name="inputAge2" />
+        <button onclick="getFromValues()">Valider</button>
+    </form>
+</body>
+</html>

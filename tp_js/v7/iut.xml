@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iut>
+    <etudiant id="123" nom="Simon">
+        <uv>
+            <nom>math</nom>
+            <dure>2 mois</dure>
+            <note>18</note>
+        </uv>
+        <uv>
+            <nom>français</nom>
+            <dure>1 mois</dure>
+            <note>12</note>
+        </uv>
+    </etudiant>
+    <etudiant id="456" nom="Tom">
+        <uv>
+            <nom>sciences</nom>
+            <dure>3 mois</dure>
+            <note>15</note>
+        </uv>
+        <uv>
+            <nom>sport</nom>
+            <dure>5 mois</dure>
+            <note>20</note>
+        </uv>
+    </etudiant>
+</iut>

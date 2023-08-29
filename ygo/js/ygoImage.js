@@ -5,9 +5,7 @@ window.onload=function(){
 }
 
 function click_carre(){
-	var listToSort = loadedCards;
-
-	console.log(sortByCardType(listToSort));
+	console.log(deck)
 }
 
 var loadedCards = [];
@@ -33,26 +31,27 @@ function sortByCardType(cardList){
 		switch(a.frameType.split("_")[0]){
 			case "normal": a = 0; break;
 			case "effect": a = 1; break;
-			case "ritual": a = 1.5; break;
-			case "spell": a = 2; break;
-			case "trap": a = 3; break;
-			case "fusion": a = 4; break;
-			case "synchro": a = 5; break;
-			case "xyz": a = 6; break;
-			case "pendulum": a = 7; break;
-			case "link": a = 8; break;
+			case "ritual": a = 2; break;
+			case "spell": a = 3; break;
+			case "trap": a = 4; break;
+			case "fusion": a = 5; break;
+			case "synchro": a = 6; break;
+			case "xyz": a = 7; break;
+			case "pendulum": a = 8; break;
+			case "link": a = 9; break;
 		}
 
 		switch(b.frameType.split("_")[0]){
 			case "normal": b = 0; break;
 			case "effect": b = 1; break;
-			case "spell": b = 2; break;
-			case "trap": b = 3; break;
-			case "fusion": b = 4; break;
-			case "synchro": b = 5; break;
-			case "xyz": b = 6; break;
-			case "pendulum": b = 7; break;
-			case "link": b = 8; break;
+			case "ritual": a = 2; break;
+			case "spell": b = 3; break;
+			case "trap": b = 4; break;
+			case "fusion": b = 5; break;
+			case "synchro": b = 6; break;
+			case "xyz": b = 7; break;
+			case "pendulum": b = 8; break;
+			case "link": b = 9; break;
 		}
 		
 		if(a<b){
@@ -121,6 +120,7 @@ function getImages(filtre){
 		let data = JSON.parse(responseJson).data;
 	    let bodyElt = document.getElementById("table_body");
 	    bodyElt.innerHTML="";
+		data = sortByCardType(data)
 		for(let x in data){
 			var img = document.createElement("img");
 			img.src = data[x].card_images[0].image_url;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 10</title>
+    <script>
+        class Animal {
+            constructor(pdv = 100){
+                this.pdv = pdv
+            }
+
+            dormir(){
+                this.pdv += 1
+            }
+        }
+
+        class Carnivore extends Animal {
+            constructor(pdv){
+                super(pdv)
+            }
+
+            chasser(proie){
+                proie.pdv = 0
+                this.pdv += 5
+            }
+        }
+
+        class Herbivore extends Animal {
+            constructor(pdv){
+                super(pdv)
+            }
+
+            paturer(){
+                this.pdv += 5
+            }
+        }
+
+        var chamois = new Herbivore()
+        var ours = new Carnivore()
+
+        console.log(chamois.pdv)
+        console.log(ours.pdv)
+        ours.chasser(chamois)
+        console.log(chamois.pdv)
+        console.log(ours.pdv)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

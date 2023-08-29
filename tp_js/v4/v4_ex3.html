@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+    <script>
+        class Calculatrice {
+            constructor(nb1, nb2){
+                this.nb1 = nb1
+                this.nb2 = nb2
+            }
+
+            addition(){
+                return this.nb1 + this.nb2
+            }
+
+            soustraction(){
+                return this.nb1 - this.nb2
+            }
+
+            division(){
+                return this.nb1 / this.nb2
+            }
+
+            multiplication(){
+                return this.nb1 * this.nb2
+            }
+
+            puissance(){
+                return Math.pow(this.nb1, this.nb2)
+            }
+        }
+
+        var casio = new Calculatrice(5, 2)
+        console.log(casio.addition())
+        console.log(casio.soustraction())
+        console.log(casio.division())
+        console.log(casio.multiplication())
+        console.log(casio.puissance())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

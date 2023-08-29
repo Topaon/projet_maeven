@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4</title>
+    <script>
+        class Stat {
+            constructor(){
+                this.data = []
+                this.sum = 0
+            }
+
+            entrer(value){
+                this.data.push(value)
+                this.sum += value
+            }
+
+            getSum(){
+                return this.sum
+            }
+
+            getAvg(){
+                return this.sum / this.data.length
+            }
+
+            getMedian(){
+                return ((this.data.length -1)/2) + 1
+            }
+        }
+
+        var etudeStatistique = new Stat()
+        console.log("objet fraichement cree, getSum : " + etudeStatistique.data)
+        etudeStatistique.entrer(5)
+        console.log("on ajoute 5, getSum : " + etudeStatistique.sum)
+        etudeStatistique.entrer(10)
+        console.log("on ajoute 10, getSum : " + etudeStatistique.sum)
+        console.log("getSum : " + etudeStatistique.getSum())
+        console.log("getAvg : " + etudeStatistique.getAvg())
+        console.log("getMedian : " + etudeStatistique.getMedian())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

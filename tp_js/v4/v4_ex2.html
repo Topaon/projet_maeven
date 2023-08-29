@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2</title>
+    <script>
+        class Voiture {
+            constructor(couleur, puissance, vitesse){
+                this.couleur = couleur
+                this.puissance = puissance
+                this.vitesse = vitesse
+            }
+
+            accelerer(){
+                this.vitesse += 10
+            }
+
+            freiner(){
+                this.vitesse = 0
+            }
+        }
+
+        var clio = new Voiture("rouge", 4, 50)
+        console.log(clio.vitesse)
+        clio.accelerer()
+        console.log(clio.vitesse)
+        clio.freiner()
+        console.log(clio.vitesse)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

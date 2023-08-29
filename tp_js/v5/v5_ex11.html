@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        class Message {
+            constructor(expediteur, destinataire){
+                this.expediteur = expediteur
+                this.destinataire = destinataire
+                this.date_envoi = new Date()
+            }
+
+            detailMessage(){
+                var bodyElt = document.getElementsByTagName("body")[0]
+
+                var exp = document.createElement("div")
+                exp.innerHTML = "Expéditeur : " + this.expediteur.prenom + " " + this.expediteur.nom
+                bodyElt.appendChild(exp)
+
+                var dest = document.createElement("div")
+                dest.innerHTML = "Destinataire : " + this.destinataire.prenom + " " + this.destinataire.nom
+                bodyElt.appendChild(dest)
+
+                var date_env = document.createElement("div")
+                date_env.innerHTML = "Envoyé le : " + this.date_envoi.getUTCDate() + "/" + (this.date_envoi.getMonth()+1) + "/" + this.date_envoi.getFullYear()
+                bodyElt.appendChild(date_env)
+            }
+        }
+
+        class Personne {
+            constructor(prenom, nom){
+                this.prenom = prenom
+                this.nom = nom
+            }
+        }
+
+        var pers1 = new Personne("David", "YALLER")
+        var pers2 = new Personne("Paul", "TRONC")
+
+        var mes = new Message(pers1, pers2)
+
+        mes.detailMessage()
+
+    </script>
+</html>

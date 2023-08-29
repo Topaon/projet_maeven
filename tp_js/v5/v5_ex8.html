@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8</title>
+    <script>
+        class Personne {
+            constructor(nom){
+                this.nom = nom
+            }
+        }
+
+        class Etudiant extends Personne {
+            constructor(nom, ine) {
+                super(nom)
+                this.ine = ine
+            }
+ 
+            getInfo(){
+                console.log("Mon nom est " + this.nom + ", et mon ine est : " + this.ine)
+            }
+        }
+        
+        class Professeur extends Personne {
+            constructor(nom, spec) {
+                super(nom)
+                this.spec = spec
+            }
+
+            getInfo(){
+                console.log("Mon nom est " + this.nom + ", et ma spécialité est : " + this.spec)
+            }
+        }
+
+        var et1 = new Etudiant("Roger", 123)
+        var et2 = new Etudiant("Isabelle", 456)
+        var et3 = new Etudiant("Marc", 789)
+        var et4 = new Etudiant("Sophie", 321)
+
+        var pr1 = new Professeur("Titouan", "Math")
+        var pr2 = new Professeur("Véronique", "Sciences")
+
+        var tab = []
+        tab.push(et1, pr1, et2, pr2, et3, et4)
+
+        for(x in tab){
+            tab[x].getInfo()
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

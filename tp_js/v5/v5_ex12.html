@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        class Compte_bancaire {
+            constructor(num, titulaire, solde=0, decouvert=-500){
+                this.num = num
+                this.titulaire = titulaire
+                this.solde = solde
+                this.decouvert = decouvert
+            }
+
+            crediter(montant){
+                this.solde += montant
+            }
+
+            debiter(montant){
+                this.solde -= montant
+            }
+
+            virement(montant, compte_destinataire){
+                if(this.decouvert < this.solde - montant){
+                    this.debiter(montant)
+                    compte_destinataire.crediter(montant)
+                } else {
+                    console.log("Solde insuffisant")
+                }
+            }
+
+            getCompteInfos(){
+                console.log("Compte N°" + this.num + " appartenant à " + this.titulaire 
+                + ", avec un solde de " + this.solde 
+                + "€ et un découvert autorisé de " + this.decouvert + "€")
+            }
+        }
+
+        var compte1 = new Compte_bancaire(123456, "GRANIER")
+        var compte2 = new Compte_bancaire(654321, "REINARG")
+
+        compte1.crediter(100000)
+        compte1.getCompteInfos()
+
+        compte1.virement(200000, compte2)
+        compte1.getCompteInfos()
+        compte2.getCompteInfos()
+
+        compte1.virement(200000, compte2)
+        compte1.getCompteInfos()
+        compte2.getCompteInfos()
+    </script>
+</html>

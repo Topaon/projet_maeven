@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 9</title>
+    <script>
+        class Joueur {
+            constructor(nom, position, but_marque){
+                this.nom = nom
+                this.position = position
+                this.but_marque = but_marque
+            }
+        }
+
+        function compare(j1, j2){
+            if(j1.but_marque > j2.but_marque){
+                console.log(j1.nom + " est meilleur que " + j2.nom)
+            } else if(j1.but_marque < j2.but_marque){
+                console.log(j2.nom + " est meilleur que " + j1.nom)
+            } else {
+                console.log(j2.nom + " et " + j1.nom + " sont à égalité")
+            }
+        }
+
+        var ron = new Joueur("Ronaldo", "attaquant", 18)
+        var mes = new Joueur("Messi", "attaquant", 21)
+        var zid = new Joueur("Zidane", "goal", 59)
+
+        compare(ron, mes)
+        compare(zid, mes)
+        compare(zid, ron)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

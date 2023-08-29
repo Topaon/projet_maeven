@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+    <script>
+        class Person {
+            constructor(name, age, email){
+                this.name = name
+                this.age = age
+                this.email = email
+            }
+
+            getInfo(){
+                return "Je m'appelle " + this.name + ", j'ai " + this.age
+                         + " ans et mon adresse mail est : " + this.email
+            }
+
+        }
+
+        var john = new Person("John", 32, "john.mercier@sfr.fr")
+        console.log(john.getInfo())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

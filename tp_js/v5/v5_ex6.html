@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 6</title>
+    <script>
+        class Addition_class {
+            static addition(c1, c2, c3){
+                return c1 + c2 + c3
+            }
+        }
+
+        class Moyenne_class {
+            static moyenne(c1, c2, c3){
+                return Addition_class.addition(c1,c2,c3)/3
+            }
+        }
+
+        console.log("La somme de 2, 6 et 7 est : " + Addition_class.addition(2,6,7))
+        console.log("La moyenne de 12, 7 et 11 est : " + Moyenne_class.moyenne(12,7,11))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

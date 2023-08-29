@@ -1,0 +1,17 @@
+{"person": {
+    "firstName" : "John",
+    "lastName" : "Smith",
+    "age" : 22,
+    "adresse" : {
+        "streetAddress" : "21 2nd Street",
+        "city" : "New York",
+        "state" : {
+            "postalCode" : 10021,
+            "name" : "NY"
+        }
+    },
+    "phoneNumber" : {
+        "home" : "212 555-1234",
+        "fax" : "646 555-4567"
+    }
+}}

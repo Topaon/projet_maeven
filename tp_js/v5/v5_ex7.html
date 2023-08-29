@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7</title>
+</head>
+<body>
+    <script>
+        class Table{
+            static start(largeur, width_border){
+                var bodyElt = document.createElement("div")
+                bodyElt.id = "mon_tableau"
+                
+                document.getElementsByTagName("body")[0].appendChild(bodyElt)
+                var table = document.createElement("table")
+                table.style.width = largeur + "%"
+                table.border = width_border
+                table.id = "auto_generated_table"
+                document.getElementById("mon_tableau").appendChild(table)
+            }
+    
+            static header(tab_nom_col){                
+                var row = document.createElement("tr")
+                for(var x = 0; x<tab_nom_col.length; x++){
+                    var division = document.createElement("th")
+                    division.innerHTML = tab_nom_col[x]
+                    row.appendChild(division)
+                }
+                document.getElementById("auto_generated_table").appendChild(row)
+            }
+    
+            static row(tab_val){                
+                var row = document.createElement("tr")
+                for(var x = 0; x<tab_val.length; x++){
+                    var division = document.createElement("td")
+                    division.innerHTML = tab_val[x]
+                    row.appendChild(division)
+                }
+                document.getElementById("auto_generated_table").appendChild(row)
+            }
+        }
+    
+        Table.start(100,2)
+        Table.header(["Firstname", "Lastname", "Email"])
+        Table.row(["John", "Marlot", "john.marlot@sfr.fr"])
+        Table.row(["Colin", "Copil", "colin.copil@sfr.fr"])
+        Table.row(["George", "Respion", "george.respion@sfr.fr"])
+    
+    </script>
+</body>
+</html>

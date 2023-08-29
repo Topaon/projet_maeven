@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 5</title>
+    <script>
+        class Rectangle {
+            constructor(longueur, largeur){
+                this.longueur = longueur
+                this.largeur = largeur
+            }
+
+            getPerimetre(value){
+                return this.longueur * 2 + this.largeur * 2
+            }
+
+            getAire(){
+                return this.longueur * this.largeur
+            }
+
+            afficher(){
+                var isSquare = this.longueur === this.largeur ? "C'est un carré" : "Ce n'est pas un carré"
+                return "Longueur : " + this.longueur + " -Largeur : " + this.largeur + " -Périmètre : " + this.getPerimetre() + " -Aire : " + this.getAire() + " – " + isSquare
+            }
+        }
+
+        var monRectangle = new Rectangle(10,8)
+        console.log(monRectangle.afficher())
+
+        var monRectangle = new Rectangle(5,5)
+        console.log(monRectangle.afficher())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

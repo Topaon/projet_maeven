@@ -1,0 +1,6 @@
+#profile_picture{
+    height:130px;
+    width:120px;
+    object-fit: cover;
+    transform: scaleX(-1);
+}

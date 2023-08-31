@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container"style="margin-top:30px;">
+        <h1>Todolist</h1>
+        <div class="input-group mb-3">
+            <input type="text"class="form-control"placeholder="Add task"id="todo">
+            <div class="input-group-append">
+                <button class="btn btn-success"type="submit"id="todo-add">Add</button>
+            </div>
+        </div>
+        <ol></ol>
+    </div>
+
+    <script>
+        function remove(){
+            $(".btn-danger").click(function(){
+                $(this).parent().remove();
+                $(this).remove();
+            });
+        }
+
+        $(document).ready(function() {
+            $("#todo-add").click(function() {
+                var task = $("#todo").val();
+                $("ol").append("<li>"+task+" <button onclick='remove()'class='btn-danger'>Delete</button></li>");
+            });
+        });
+    </script>
+</body>
+</html>

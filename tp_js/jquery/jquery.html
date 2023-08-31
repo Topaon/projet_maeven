@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").val("")
+            // Evenements
+            $("p").hide()
+            $("h2").on({
+                click: function(){ $("p").show() },
+                mouseenter: function(){ $(this).css("background-color", "lightgray") },
+                mouseleave: function(){ $(this).css("background-color", "white") }
+            })
+
+            // Effets
+            $("#flip").click(function() {
+                $("#panel").slideToggle("slow")
+            })
+
+            // Contenu
+            $("#cont").click(function(){
+                console.log("Contenu de l'élément #cont : " + $("#cont").text())
+                console.log("Html de l'élément #cont : " + $("#cont").html())
+                console.log("Id de l'élément #cont : " + $("#cont").attr("id"))
+                console.log("Valeur de l'input #input_cont : " + $("#input_cont").val())
+
+                $("#modif_cont").html($("#input_cont").val()) // <= on peut mettre du pur html dedans
+                $("#modif_cont").append("<b>nouveau texte</b>") // <= comme ça
+            })
+
+            $("#btn_list").click(function(){
+                $("#list_cont").prepend("<li>Ancien item</li>")
+                $("#list_cont").append("<li>Nouvel item</li>")
+            })
+
+            $("#btn_vider").click(function(){
+                $("#list_cont").empty()
+            })
+
+            $("#btn_avant").click(function(){
+                $("#btn_avant").before("<div>je suis avant")
+            })
+
+            $("#btn_apres").click(function(){
+                $("#btn_apres").after("<div>je suis apres")
+            })
+
+            $("#btn_pula").click(function(){
+                $("#btn_pula").remove()
+            })
+
+            $("#btn_red").click(function(){
+                $("#btn_red").addClass("rouge")
+            })
+        });
+
+    </script>
+    <style>
+        #panel, #flip{
+            padding: 5px;
+            text-align: center;
+            background-color: red;
+            border: solid 1px black;
+        }
+
+        #panel{
+            padding: 50px;
+            display: none;
+        }
+
+        .rouge{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Evenements</h1>
+    <h2>h1</h2>
+    <p>p</p>
+    <div class="ma_classe">div</div>
+    <div id="mon_id">div</div>
+
+    <h1>Effets</h1>
+    <div id="flip">flip</div>
+    <div id="panel">panel</div>
+
+    <h1>Contenu</h1>
+    <button id="cont">Contenu</button><br>
+    <input type="text" name="" id="input_cont"><br>
+    <div id="modif_cont">Rien (pour le moment ...)</div>
+    <ol id="list_cont">
+        <li>Liste item</li>
+    </ol>
+    <button id="btn_list">Ajouter un item avant + après</button><br>
+    <button id="btn_vider">Vider la liste</button><br>
+    <button id="btn_avant">div avant moi</button><br>
+    <button id="btn_apres">div après moi</button><br>
+    <button id="btn_pula">NON NON NE CLIQUE P</button><br>
+    <button id="btn_red">Je deviens rouge</button><br>
+</body>
+</html>

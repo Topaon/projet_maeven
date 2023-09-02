@@ -11,46 +11,27 @@ body{
 	}
 }
 
-#cards_container{
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-}
-
-#database_container{
+#carre_rouge{
+	height: 50px;
+	width: 50px;
 	background-color: red;
-	width: 30%;
-	height: 500px;
-	overflow: auto;
 }
 
 #deck_container{
-	background-color: blue;
-	width: 30%;
+	background-color: white;
 }
 
 #extra_deck_container{
-	background-color: yellow;
-	width: 30%;
+	background-color: white;
 }
 
 #detail_container{
-	background-color: green;
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	background-color: white;
 }
 
 #desc_text{
 	margin: 5%;
 	text-justify: inter-word; 
-}
-
-#carre_rouge{
-	height: 50px;
-	width: 50px;
-	background-color: red;
 }
 
 .img_slot{

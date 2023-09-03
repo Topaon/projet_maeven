@@ -1,38 +1,67 @@
 package sg.corporation.testSpringSecurity.security;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
-
-public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
-	
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication()
-		.withUser("123").password(passwordEncoder().encode("123")).roles("USER")
-		.and()
-		.withUser("456").password(passwordEncoder().encode("456")).roles("ADMIN", "USER");
-	}
-	
-	@Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .authorizeRequests()
-            .antMatchers("/admin/*").hasRole("ADMIN")
-            .antMatchers("/user/*").hasRole("USER")
-            .anyRequest().authenticated()
-            .and()
-            .formLogin(); // renvoie la page de login
-    }
+@Configuration
+@EnableWebSecurity
+public class SpringSecurityConfig {
 	
 	@Bean
-	public PasswordEncoder passwordEncoder() {
-	   return new BCryptPasswordEncoder();
+	public SecurityFilterChain sfc(HttpSecurity http) throws Exception {
+		http
+			.authorizeRequests(authorizeRequests ->
+				authorizeRequests
+					.antMatchers("/admin/*").hasRole("ADMIN")
+		            .antMatchers("/user/*").hasRole("USER")
+		            .anyRequest().authenticated()
+		            .and()
+			)
+			.formLogin();
+		
+		return http.build();
+	}
+	
+	
+	public UserDetailsService defUsersInMemory() {
+		PasswordEncoder delegatingPasswordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+		UserDetails user = User.builder()
+				.username("simon")
+				.password(delegatingPasswordEncoder.encode("ekko"))
+				.roles("USER")
+				.build();
+		UserDetails user2 = User.builder()
+				.username("granier")
+				.password(delegatingPasswordEncoder.encode("twitch"))
+				.roles("USER")
+				.build();
+		return new InMemoryUserDetailsManager(user, user2);
+	}
+
+	@Bean
+	public UserDetailsService defUsers() {
+		PasswordEncoder delegatingPasswordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+		UserDetails user = User.builder()
+				.username("simon")
+				.password(delegatingPasswordEncoder.encode("ekko"))
+				.roles("USER")
+				.build();
+//		UserDetails user2 = User.builder()
+//				.username("granier")
+//				.password(delegatingPasswordEncoder.encode("twitch"))
+//				.roles("USER")
+//				.build();
+		CustomUserDetailsManager cuds = new CustomUserDetailsManager(user);
+		InMemoryUserDetailsManager test = new InMemoryUserDetailsManager(cuds.getNewUserDetails());
+		return cuds;
 	}
 }

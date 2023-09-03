@@ -1,0 +1,17 @@
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;
+create table voiture (id bigint not null auto_increment, marque varchar(255), modele varchar(255), primary key (id)) engine=InnoDB;

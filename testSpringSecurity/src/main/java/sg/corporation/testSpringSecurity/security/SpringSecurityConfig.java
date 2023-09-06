@@ -31,7 +31,7 @@ public class SpringSecurityConfig {
 		return http.build();
 	}
 	
-	
+	@Bean
 	public UserDetailsService defUsersInMemory() {
 		PasswordEncoder delegatingPasswordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 		UserDetails user = User.builder()
@@ -45,23 +45,5 @@ public class SpringSecurityConfig {
 				.roles("USER")
 				.build();
 		return new InMemoryUserDetailsManager(user, user2);
-	}
-
-	@Bean
-	public UserDetailsService defUsers() {
-		PasswordEncoder delegatingPasswordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-		UserDetails user = User.builder()
-				.username("simon")
-				.password(delegatingPasswordEncoder.encode("ekko"))
-				.roles("USER")
-				.build();
-//		UserDetails user2 = User.builder()
-//				.username("granier")
-//				.password(delegatingPasswordEncoder.encode("twitch"))
-//				.roles("USER")
-//				.build();
-		CustomUserDetailsManager cuds = new CustomUserDetailsManager(user);
-		InMemoryUserDetailsManager test = new InMemoryUserDetailsManager(cuds.getNewUserDetails());
-		return cuds;
 	}
 }

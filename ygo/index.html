@@ -14,28 +14,29 @@
 <body>
 	<div class="col-xl">
 		<h1>Deck builder</h1>
-		 Nombre de cartes dans le deck : <span id="deckSize"></span><br/>
-		 Nombre de cartes dans l'extra deck : <span id="extraDeckSize"></span>
+		
 		</div>
 		<div class="row">
 			<div id="detail_container" class="text-center col-xl-2">
-				
+
 			</div>
 			<div class="col-xl">
+				<input type="text" placeholder="Entrez le nom d'un archetype" id="input_search_card" class="form-control" style="width: 300px" oninput="chercherCarteParNom()">
+				<table id="list_cards"></table>
 				<div id="deck_container">
-					
+
 				</div>
-				
+
 				<div id="extra_deck_container">
-					
+
 				</div>
 			</div>
 			<div class="col-xl">
-				<select id="archetype-select" onchange="filtreArchetype()" size="1">
+				<select id="archetype-select" onchange="chercherCarteParArchetype()" size="1">
 				<option value="">Archetype</option>
 				</select><br/>
 				<div id="table_body">
-					
+
 				</div>
 			</div>
 		</div>

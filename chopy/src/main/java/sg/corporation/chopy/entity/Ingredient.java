@@ -8,25 +8,17 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
-@Getter @Setter @NoArgsConstructor
 @Entity
+@Getter@Setter@NoArgsConstructor@ToString
 public class Ingredient {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	private String label;
+	private Long id;
+	private String name;
 	
-	// Constructors
-	public Ingredient(long id, String label) {
-		super();
-		this.id = id;
-		this.label = label;
-	}
-	
-	// toString() method
-	@Override
-	public String toString() {
-		return "Ingredient [id=" + id + ", label=" + label + "]";
+	public Ingredient(String name) {
+		this.name = name;
 	}
 }

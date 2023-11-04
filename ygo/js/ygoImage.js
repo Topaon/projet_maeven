@@ -1,7 +1,6 @@
 window.onload=function(){
 	initSelect();
 	majDeckSize();
-	getImages("?archetype=@Ignister");
 }
 
 function click_carre(){
@@ -27,7 +26,7 @@ function assignId(idCard, deckType){
 function sortByCardType(cardList){
 
 	sortedCardList = cardList.sort(function(a,b) {
-		
+
 		switch(a.frameType.split("_")[0]){
 			case "normal": a = 0; break;
 			case "effect": a = 1; break;
@@ -53,7 +52,7 @@ function sortByCardType(cardList){
 			case "pendulum": b = 8; break;
 			case "link": b = 9; break;
 		}
-		
+
 		if(a<b){
 			return -1;
 		} else if(a>b){
@@ -67,8 +66,10 @@ function sortByCardType(cardList){
 }
 
 function majDeckSize(){
+	/*
 	document.getElementById("deckSize").innerHTML = deck.length;
 	document.getElementById("extraDeckSize").innerHTML = extraDeck.length;
+	*/
 }
 
 function countCopiesInDeck(carte, deckType){
@@ -90,14 +91,7 @@ function countCopiesInDeck(carte, deckType){
 	}
 }
 
-function filtreArchetype(){
-	let bodyElt = document.getElementById("archetype-select");
-	let filtre = "?archetype=" + bodyElt.value;
-	getImages(filtre);
-}
-
 function initSelect(){
-	let listArchetype = getListArchetypes();
 	for(x in listArchetype){
 		if(listArchetype[x].archetype){
 			listArchetype.push(listArchetype[x].archetype);
@@ -109,29 +103,24 @@ function initSelect(){
 		var opt = document.createElement("option");
 		opt.text = unique[x];
 		opt.value = unique[x];
-		bodyElt.appendChild(opt);							
+		bodyElt.appendChild(opt);
 	}
 }
 
-function getImages(filtre){	
-	loadedCards = [];
-	let url = "https://db.ygoprodeck.com/api/v7/cardinfo.php" + filtre;
-	makeAjaxGetRequest(url,function(responseJson){
-		let data = JSON.parse(responseJson).data;
-	    let bodyElt = document.getElementById("table_body");
-	    bodyElt.innerHTML="";
-		data = sortByCardType(data)
-		for(let x in data){
-			var img = document.createElement("img");
-			img.src = data[x].card_images[0].image_url;
-			img.className = "img_slot";
-			img.id = loadedCards.length;
-			loadedCards.push(data[x]);
-			img.setAttribute("oncontextmenu", "addToDeck(\"" + img.id + "\");return false;");
-			img.setAttribute("onclick", "showDetail(\"" + img.id + "\")");			
-			bodyElt.appendChild(img);
-		}
-   })
+function getImages(data){
+	let bodyElt = document.getElementById("table_body");
+	bodyElt.innerHTML="";
+	data = sortByCardType(data)
+	for(let x in data){
+		var img = document.createElement("img");
+		img.src = "img/card_img_database/" + data[x].id + ".jpg";
+		img.className = "img_slot";
+		img.id = loadedCards.length;
+		loadedCards.push(data[x]);
+		img.setAttribute("oncontextmenu", "addToDeck(\"" + img.id + "\");return false;");
+		img.setAttribute("onmouseover", "showDetail(\"" + img.id + "\")");
+		bodyElt.appendChild(img);
+	}
 }
 
 function addToDeck(loadedId){
@@ -154,7 +143,7 @@ function addToDeck(loadedId){
 			img.style.animation = "created_in_deck 0.1s";
 			bodyElt.appendChild(img);
 			extraDeck.push(carte);
-	
+
 			addCardAnimation(loadedId);
 			majDeckSize();
 		}
@@ -170,11 +159,27 @@ function addToDeck(loadedId){
 			img.style.animation = "created_in_deck 0.1s";
 			bodyElt.appendChild(img);
 			deck.push(carte);
-	
+
 			addCardAnimation(loadedId);
 			majDeckSize();
 		}
 	}
+}
+
+function removeFromDeck(id, deckType){
+	let bodyElt = document.getElementById(id);
+	bodyElt.style.animation = "removed_from_deck 0.04s";
+	setTimeout(function(){bodyElt.remove()}, 40);
+	
+	if(deckType === "deck"){
+		carte = deck.filter((item, index) => item.id === Number(id.split("_")[2]))
+		deck.splice(deck.indexOf(carte[0]), 1);
+	} else if(deckType === "extraDeck") {
+		carte = extraDeck.filter((item, index) => item.id === Number(id.split("_")[2]))
+		extraDeck.splice(extraDeck.indexOf(carte[0]), 1);
+	}
+	
+	majDeckSize();
 }
 
 function showDetail(cardToShow){
@@ -188,31 +193,33 @@ function showDetail(cardToShow){
 	}
 	let bodyElt = document.getElementById("detail_container");
 	bodyElt.innerHTML = "";
-	
+
 	var img = document.createElement("img");
 	img.src = carte.card_images[0].image_url;
 	img.id = carte.id;
 	img.className = "img_detail";
+	img.setAttribute("oncontextmenu", "addToDeck(\"" + cardToShow + "\");return false;");
 	bodyElt.appendChild(img);
-	
+
 	var desc = document.createElement("p");
 	desc.innerText = carte.desc;
 	desc.id = "desc_text";
 	bodyElt.appendChild(desc);
 }
 
-function removeFromDeck(id, deckType){
-	let bodyElt = document.getElementById(id);
-	bodyElt.style.animation = "removed_from_deck 0.04s";
-	setTimeout(function(){bodyElt.remove()}, 40);
-
-	if(deckType === "deck"){
-		carte = deck.filter((item, index) => item.id === Number(id.split("_")[2]))
-		deck.splice(deck.indexOf(carte[0]), 1);
-	} else if(deckType === "extraDeck") {
-		carte = extraDeck.filter((item, index) => item.id === Number(id.split("_")[2]))
-		extraDeck.splice(extraDeck.indexOf(carte[0]), 1);
+function chercherCarteParNom(){
+	var name = document.getElementById("input_search_card").value;
+	if(name.length > 2) {
+		var data = cardDataBase.filter((item) => item.name.toLowerCase().includes(name.toLowerCase()));
+		getImages(data)
+	} else if(name.length == 0) {
+		getImages("")
 	}
+}
 
-	majDeckSize();
+function chercherCarteParArchetype(){
+	let bodyElt = document.getElementById("archetype-select");
+	let archetype = bodyElt.value;
+	var data = cardDataBase.filter((item) => item.archetype == archetype);
+	getImages(data)
 }

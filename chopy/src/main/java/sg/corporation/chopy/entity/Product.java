@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,18 +12,21 @@ import lombok.ToString;
 
 @Getter @Setter @NoArgsConstructor@ToString
 @Entity
-public class Ingredient {
+public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String description;
+	private Integer quantity;
+	private String unit;
+	private String type;
 	
-	@ManyToOne
-	private Product product;
-	private float quantity;
-	
-	public Ingredient(Long id, Product product, float quantity) {
+	// Constructors
+	public Product(long id, String description, Integer quantity, String unit, String type) {
 		this.id = id;
-		this.product = product;
+		this.description = description;
 		this.quantity = quantity;
+		this.unit = unit;
+		this.type = type;
 	}
 }

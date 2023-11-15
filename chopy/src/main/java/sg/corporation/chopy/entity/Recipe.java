@@ -1,31 +1,39 @@
 package sg.corporation.chopy.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
-@Getter@Setter@NoArgsConstructor@ToString
+@Getter @Setter @NoArgsConstructor
 public class Recipe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String name;
+	private long id;
+	private String label;
 	
-	@ManyToMany
+	@OneToMany
 	private List<Ingredient> ingredients;
 	
-	public Recipe(String name) {
-		super();
-		this.name = name;
+	// Constructors
+	public Recipe(long id, String label) {
+		this.id = id;
+		this.label = label;
+		this.ingredients = new ArrayList<Ingredient>();
+	}
+
+	// toString() method
+	@Override
+	public String toString() {
+		return "Recipe [id=" + id + ", label=" + label + ", products=" + ingredients + "]";
 	}
 }

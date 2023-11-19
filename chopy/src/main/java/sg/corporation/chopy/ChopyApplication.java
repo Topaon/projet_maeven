@@ -10,7 +10,7 @@ public class ChopyApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ChopyApplication.class, args);
-		System.out.println("running at : http://localhost:8080/Chopy");
+		System.out.println("running at : http://localhost:8080/chopy");
 	}
 	
 	public static void test() {

@@ -19,21 +19,21 @@ public class Recipe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String label;
+	private String name;
 	
 	@OneToMany
 	private List<Ingredient> ingredients;
 	
 	// Constructors
-	public Recipe(long id, String label) {
+	public Recipe(long id, String name) {
 		this.id = id;
-		this.label = label;
+		this.name = name;
 		this.ingredients = new ArrayList<Ingredient>();
 	}
 
 	// toString() method
 	@Override
 	public String toString() {
-		return "Recipe [id=" + id + ", label=" + label + ", products=" + ingredients + "]";
+		return "Recipe [id=" + id + ", label=" + name + ", products=" + ingredients + "]";
 	}
 }

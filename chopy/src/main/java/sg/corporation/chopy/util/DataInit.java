@@ -8,9 +8,11 @@ import org.springframework.stereotype.Component;
 import sg.corporation.chopy.dao.DaoIngredient;
 import sg.corporation.chopy.dao.DaoProduct;
 import sg.corporation.chopy.dao.DaoRecipe;
+import sg.corporation.chopy.dao.DaoUser;
 import sg.corporation.chopy.entity.Ingredient;
 import sg.corporation.chopy.entity.Product;
 import sg.corporation.chopy.entity.Recipe;
+import sg.corporation.chopy.entity.User;
 
 @Component
 public class DataInit {
@@ -23,6 +25,9 @@ public class DataInit {
 	
 	@Autowired
 	DaoIngredient daoIngredient;
+	
+	@Autowired
+	DaoUser daoUser;
 	
 	@PostConstruct
 	public void dataInit() {
@@ -70,7 +75,7 @@ public class DataInit {
 		Product Noisettes = daoProduct.save(new Product(0, "Noisettes", 0, "gramme", "miam"));
 		
 		//
-		Recipe chiliBacon = new Recipe(0, "Chili con carne con bacon");
+		Recipe chiliBacon = new Recipe(null, "Chili con carne con bacon", "https://leseng.rosselcdn.net/sites/default/files/dpistyles_v2/ls_16_9_864w/2019/08/07/node_240820/26787467/public/2019/08/07/B9720503088Z.1_20190807152153_000%2BGPTE69ON6.1-0.jpg?itok=QA9jxa5r1565184120");
 		chiliBacon.getIngredients().add(daoIngredient.save(new Ingredient(0l, ViandeHachee, 50)));
 		chiliBacon.getIngredients().add(daoIngredient.save(new Ingredient(0l, Bacon, 50)));
 		chiliBacon.getIngredients().add(daoIngredient.save(new Ingredient(0l, Riz, 100)));
@@ -83,7 +88,7 @@ public class DataInit {
 		chiliBacon.getIngredients().add(daoIngredient.save(new Ingredient(0l, Cumin, 0)));
 		daoRecipe.save(chiliBacon);
 		
-		Recipe pateCarbo = new Recipe(0, "Tagliatelles à la carbonara");
+		Recipe pateCarbo = new Recipe(null, "Tagliatelles à la carbonara", "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/recipe_photos/original/178759/tagliatelles_carbonara.jpg");
 		pateCarbo.getIngredients().add(daoIngredient.save(new Ingredient(0l, Pate, 120)));
 		pateCarbo.getIngredients().add(daoIngredient.save(new Ingredient(0l, Lardon, 80)));
 		pateCarbo.getIngredients().add(daoIngredient.save(new Ingredient(0l, Parmesan, 40)));
@@ -91,7 +96,7 @@ public class DataInit {
 		pateCarbo.getIngredients().add(daoIngredient.save(new Ingredient(0l, HuileOlive, 0)));
 		daoRecipe.save(pateCarbo);
 		
-		Recipe pateBrocolis = new Recipe(0, "Pates aux brocolis et crème de parmesan");
+		Recipe pateBrocolis = new Recipe(null, "Pates aux brocolis et crème de parmesan", "https://assets.afcdn.com/recipe/20130823/13610_w1024h1024c1cx1500cy1123.jpg");
 		pateBrocolis.getIngredients().add(daoIngredient.save(new Ingredient(0l, Pate, 120)));
 		pateBrocolis.getIngredients().add(daoIngredient.save(new Ingredient(0l, Brocolis, 0.5f)));
 		pateBrocolis.getIngredients().add(daoIngredient.save(new Ingredient(0l, Parmesan, 25)));
@@ -100,12 +105,15 @@ public class DataInit {
 		pateBrocolis.getIngredients().add(daoIngredient.save(new Ingredient(0l, HuileOlive, 0)));
 		daoRecipe.save(pateBrocolis);
 		
-		Recipe soupeCarotte = new Recipe(0, "Velouté de carottes, coriandre et éclats de noisettes");
+		Recipe soupeCarotte = new Recipe(null, "Velouté de carottes, coriandre et éclats de noisettes", "https://static.750g.com/images/1200-630/6233b36c031e28991ad1c10bd164bc15/adobestock-169798799.jpeg");
 		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Carotte, 125)));
 		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Coriandre, 0)));
 		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Noisettes, 10)));
 		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Beurre, 12.5f)));
 		daoRecipe.save(soupeCarotte);
 		
+		daoUser.save(new User("Simon"));
+		daoUser.save(new User("Jack"));
+		daoUser.save(new User("Matthieu"));
 	}
 }

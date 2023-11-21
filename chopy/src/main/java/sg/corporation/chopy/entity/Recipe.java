@@ -1,6 +1,7 @@
 package sg.corporation.chopy.entity;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -18,17 +19,19 @@ import lombok.Setter;
 public class Recipe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String name;
+	private String url_image;
 	
 	@OneToMany
 	private List<Ingredient> ingredients;
 	
 	// Constructors
-	public Recipe(long id, String name) {
+	public Recipe(Long id, String label, String image) {
 		this.id = id;
-		this.name = name;
+		this.name = label;
 		this.ingredients = new ArrayList<Ingredient>();
+		this.url_image = image;
 	}
 
 	// toString() method
@@ -36,4 +39,21 @@ public class Recipe {
 	public String toString() {
 		return "Recipe [id=" + id + ", label=" + name + ", products=" + ingredients + "]";
 	}
+	
+	// Comparators
+	public static Comparator<Recipe> ComparatorIngredientsSize = new Comparator<Recipe>() {
+		@Override
+		public int compare(Recipe recipe1, Recipe recipe2) {
+			int index = recipe1.ingredients.size() - recipe2.ingredients.size();
+			return index;
+		}
+	};
+	
+	public static Comparator<Recipe> ComparatorAlphabetical = new Comparator<Recipe>() {
+		@Override
+		public int compare(Recipe recipe1, Recipe recipe2) {
+			int index = recipe1.ingredients.size() - recipe2.ingredients.size();
+			return index;
+		}
+	};
 }

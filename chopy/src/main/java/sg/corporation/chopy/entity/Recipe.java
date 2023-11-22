@@ -21,7 +21,7 @@ public class Recipe {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String url_image;
+	private String image_url;
 	
 	@OneToMany
 	private List<Ingredient> ingredients;
@@ -31,7 +31,7 @@ public class Recipe {
 		this.id = id;
 		this.name = label;
 		this.ingredients = new ArrayList<Ingredient>();
-		this.url_image = image;
+		this.image_url = image;
 	}
 
 	// toString() method

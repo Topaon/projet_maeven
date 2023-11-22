@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import sg.corporation.chopy.service.ServiceRecipe;
 
 @RestController
 @RequestMapping(value = "/chopy-api/recipe", headers="Accept=application/json")
+@CrossOrigin(origins = "*")
 public class RecipeRestCtrl {
 	
 	@Autowired

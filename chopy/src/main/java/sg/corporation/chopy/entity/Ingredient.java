@@ -10,9 +10,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
-@Getter @Setter @NoArgsConstructor@ToString
 @Entity
+@Getter @Setter @NoArgsConstructor@ToString
+@Slf4j
 public class Ingredient {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +25,7 @@ public class Ingredient {
 	private float quantity;
 	
 	public Ingredient(Long id, Product product, float quantity) {
+		log.info("Constructeur de la classe Ingredient");
 		this.id = id;
 		this.product = product;
 		this.quantity = quantity;

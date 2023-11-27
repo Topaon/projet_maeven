@@ -13,9 +13,11 @@ import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
+@Slf4j
 public class Recipe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +30,7 @@ public class Recipe {
 	
 	// Constructors
 	public Recipe(Long id, String label, String image) {
+		log.info("Constructeur de la classe Recipe");
 		this.id = id;
 		this.name = label;
 		this.ingredients = new ArrayList<Ingredient>();

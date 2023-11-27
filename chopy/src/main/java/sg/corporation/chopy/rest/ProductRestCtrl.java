@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
 import sg.corporation.chopy.dao.DaoProduct;
 import sg.corporation.chopy.entity.Product;
 
 @RestController
 @RequestMapping(value = "/chopy-api/product", headers="Accept=application/json")
+@Slf4j
 public class ProductRestCtrl {
 	
 	@Autowired
@@ -19,7 +21,7 @@ public class ProductRestCtrl {
 	
 	@GetMapping("")
 	public List<Product> getAllProducts() {
-		System.out.println("coucou");
+		log.info("API getAllProducts");
 		return daoProduct.findAll();
 	}
 }

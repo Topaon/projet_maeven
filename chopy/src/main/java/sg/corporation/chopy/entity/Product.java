@@ -9,9 +9,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
-@Getter @Setter @NoArgsConstructor@ToString
 @Entity
+@Getter @Setter @NoArgsConstructor@ToString
+@Slf4j
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +25,7 @@ public class Product {
 	
 	// Constructors
 	public Product(long id, String description, Integer quantity, String unit, String type) {
+		log.info("Constructeur de la classe Product");
 		this.id = id;
 		this.description = description;
 		this.quantity = quantity;

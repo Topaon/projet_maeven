@@ -1,0 +1,927 @@
+15:06:33.725 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 13368 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:06:33.730 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:06:33.843 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\simon.granier\.m2\repository\com\oracle\database\jdbc\ojdbc11\21.5.0.0\ojdbc11-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/simon.granier/.m2/repository/com/oracle/database/jdbc/ojdbc11/21.5.0.0/oraclepki.jar
+15:06:33.844 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+15:06:33.844 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+15:06:35.040 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:06:35.174 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 4 JPA repository interfaces.
+15:06:36.530 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:06:36.546 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:06:36.557 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:06:36.558 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:06:36.715 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:06:36.716 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2871 ms
+15:06:37.302 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:06:37.425 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+15:06:37.761 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+15:06:37.945 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:06:38.366 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:06:38.407 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:06:39.597 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:06:39.611 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:06:40.504 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:06:40.505 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.789 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.801 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.810 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.817 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.824 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.832 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.838 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.845 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.851 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.858 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.864 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.872 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.880 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.887 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.895 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.905 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.914 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.921 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.930 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.936 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.942 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.951 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.958 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.963 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.970 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.977 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.984 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.991 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:40.998 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:41.005 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:41.013 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:41.019 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:06:41.024 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:06:41.025 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.049 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.057 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.065 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.073 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.081 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.088 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.096 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.105 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.114 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.167 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:06:41.168 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.175 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.182 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.190 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.199 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.218 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:06:41.219 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.228 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.235 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.242 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.249 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.257 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.273 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:06:41.274 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.282 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.289 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.298 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:06:41.312 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:06:41.320 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:06:41.327 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:06:41.765 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:06:42.136 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:06:42.163 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:06:42.255 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:06:42.302 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 9.404 seconds (JVM running for 10.208)
+15:06:42.314 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:06:51.309 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:06:51.310 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:06:51.313 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+15:06:51.364 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:06:51.364 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:07:08.500 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+15:07:08.533 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+15:07:08.534 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:07:08.536 [Thread-5] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:07:08.538 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+15:07:08.544 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+15:07:08.549 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:07:08.556 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:07:08.570 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:07:08.732 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 13368 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:07:08.732 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:07:09.049 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:07:09.091 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
+15:07:09.203 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:07:09.205 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:07:09.206 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:07:09.206 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:07:09.256 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:07:09.256 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 520 ms
+15:07:09.308 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:07:09.319 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+15:07:09.327 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+15:07:09.328 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:07:09.653 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:07:09.654 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:07:09.859 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:07:09.860 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.873 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.879 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.885 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.891 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.897 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.902 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.908 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.914 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.919 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.925 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.931 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.937 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.944 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.950 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.959 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.965 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.970 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.976 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.981 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.987 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.991 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:09.997 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.002 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.007 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.012 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.017 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.022 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.027 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.032 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.037 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.043 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.047 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:10.051 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:10.052 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.062 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.068 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.075 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.082 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.088 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.094 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.100 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.107 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.113 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.132 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:10.133 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.139 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.146 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.152 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.158 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.173 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:10.173 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.179 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.186 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.192 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.198 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.204 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.216 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:10.216 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.222 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.230 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.236 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:10.249 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:10.255 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:10.260 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:10.344 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:07:10.400 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:07:10.408 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:07:10.419 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:07:10.423 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 1.737 seconds (JVM running for 38.329)
+15:07:10.427 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:07:10.428 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:07:11.848 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+15:07:11.874 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+15:07:11.874 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:07:11.877 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+15:07:11.879 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+15:07:11.880 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:07:11.881 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+15:07:11.885 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+15:07:12.019 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 13368 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:07:12.019 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:07:12.230 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:07:12.277 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+15:07:12.393 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:07:12.395 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:07:12.396 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:07:12.396 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:07:12.461 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:07:12.461 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 439 ms
+15:07:12.515 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:07:12.525 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+15:07:12.535 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+15:07:12.535 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:07:12.907 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:07:12.908 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:07:13.099 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:07:13.099 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.113 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.119 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.125 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.129 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.134 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.139 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.145 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.149 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.153 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.158 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.163 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.168 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.172 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.178 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.184 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.189 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.195 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.199 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.204 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.209 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.213 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.218 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.223 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.229 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.234 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.239 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.244 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.249 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.253 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.258 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.263 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.269 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:13.274 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:13.274 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.282 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.288 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.294 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.300 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.307 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.313 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.320 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.326 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.332 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.353 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:13.353 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.361 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.368 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.376 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.383 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.411 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:13.411 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.418 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.425 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.430 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.436 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.442 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.456 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:13.458 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.463 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.469 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.476 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:13.490 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:13.495 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:13.499 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:13.577 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:07:13.630 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:07:13.636 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:07:13.649 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:07:13.654 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 1.674 seconds (JVM running for 41.56)
+15:07:13.656 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:07:13.657 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:07:13.668 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:07:13.668 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:07:13.669 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+15:07:13.672 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:07:13.672 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:07:16.042 [http-nio-8080-exec-2] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:07:16.043 [http-nio-8080-exec-2] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:07:18.025 [http-nio-8080-exec-3] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:07:18.026 [http-nio-8080-exec-3] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:07:29.550 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+15:07:29.581 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+15:07:29.582 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:07:29.583 [Thread-11] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:07:29.586 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+15:07:29.589 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+15:07:29.590 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:07:29.590 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+15:07:29.596 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+15:07:29.723 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 13368 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:07:29.724 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:07:29.915 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:07:29.945 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 4 JPA repository interfaces.
+15:07:30.022 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:07:30.023 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:07:30.024 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:07:30.024 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:07:30.060 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:07:30.060 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 334 ms
+15:07:30.092 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:07:30.102 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+15:07:30.107 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+15:07:30.108 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:07:30.415 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:07:30.415 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:07:30.536 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:07:30.537 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.550 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.556 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.561 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.565 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.570 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.574 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.579 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.583 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.587 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.591 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.595 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.600 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.605 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.611 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.620 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.626 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.630 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.635 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.639 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.642 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.647 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.651 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.655 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.660 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.664 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.669 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.673 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.677 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.681 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.684 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.688 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.693 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:07:30.698 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:30.698 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.705 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.710 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.714 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.719 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.724 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.729 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.734 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.740 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.745 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.763 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:30.763 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.769 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.774 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.780 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.786 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.795 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:30.796 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.800 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.803 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.808 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.811 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.816 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.826 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:07:30.826 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.833 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.837 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.840 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:07:30.850 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:30.854 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:30.856 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:07:30.904 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:07:30.949 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:07:30.952 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:07:30.961 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:07:30.964 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 1.279 seconds (JVM running for 58.87)
+15:07:30.965 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:07:30.966 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:08:42.555 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:08:42.555 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:08:42.557 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+15:08:42.560 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:08:42.560 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:08:43.477 [http-nio-8080-exec-2] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:08:43.478 [http-nio-8080-exec-2] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:08:55.876 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+15:08:55.899 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+15:08:55.900 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:08:55.900 [Thread-15] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:08:55.902 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+15:08:55.906 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+15:08:55.908 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:08:55.909 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+15:08:55.912 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+15:08:56.043 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 13368 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:08:56.043 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:08:56.194 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:08:56.223 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+15:08:56.288 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:08:56.289 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:08:56.290 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:08:56.290 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:08:56.317 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:08:56.317 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 272 ms
+15:08:56.342 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:08:56.349 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+15:08:56.357 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+15:08:56.358 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:08:56.643 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:08:56.643 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:08:56.727 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:08:56.727 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.735 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.740 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.743 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.746 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.749 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.752 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.754 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.758 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.762 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.765 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.768 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.771 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.774 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.777 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.782 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.785 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.788 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.791 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.794 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.797 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.800 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.803 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.806 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.810 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.814 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.817 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.820 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.823 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.825 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.829 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.833 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.836 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:08:56.840 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:08:56.841 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.848 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.852 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.857 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.862 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.866 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.870 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.875 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.881 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.884 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.899 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:08:56.901 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.906 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.910 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.914 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.917 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.927 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:08:56.927 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.931 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.935 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.938 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.942 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.945 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.953 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:08:56.953 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.957 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.961 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.964 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:08:56.972 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:08:56.976 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:08:56.978 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:08:57.012 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:08:57.039 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:08:57.042 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:08:57.050 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:08:57.053 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 1.048 seconds (JVM running for 144.959)
+15:08:57.055 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:08:57.055 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:09:00.163 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:09:00.163 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:09:00.164 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+15:09:00.167 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:09:00.167 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:09:01.825 [http-nio-8080-exec-2] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:09:01.826 [http-nio-8080-exec-2] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:09:08.774 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+15:09:08.802 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+15:09:08.803 [Thread-19] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:09:08.803 [Thread-19] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:09:08.806 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+15:09:08.809 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+15:09:08.811 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:09:08.811 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+15:09:08.814 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+15:09:08.896 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 13368 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:09:08.897 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:09:09.064 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:09:09.088 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+15:09:09.154 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:09:09.154 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:09:09.155 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:09:09.155 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:09:09.184 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:09:09.184 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 285 ms
+15:09:09.212 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:09:09.219 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+15:09:09.225 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+15:09:09.225 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:09:09.534 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:09:09.534 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:09:09.624 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:09:09.624 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.633 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.637 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.641 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.645 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.650 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.653 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.657 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.660 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.664 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.668 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.670 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.674 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.677 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.680 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.684 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.687 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.691 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.695 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.698 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.701 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.704 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.708 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.712 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.715 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.718 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.721 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.724 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.727 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.730 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.733 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.737 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.742 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:09.746 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:09.746 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.753 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.757 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.762 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.766 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.771 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.776 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.780 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.782 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.787 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.802 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:09.802 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.808 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.814 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.818 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.824 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.838 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:09.838 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.845 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.852 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.857 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.862 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.868 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.879 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:09.879 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.885 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.892 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.897 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:09.906 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:09:09.910 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:09:09.914 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:09:09.963 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:09:09.992 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:09:09.995 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:09:10.002 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:09:10.005 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 1.138 seconds (JVM running for 157.911)
+15:09:10.006 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:09:10.007 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:09:13.649 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:09:13.650 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:09:13.650 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+15:09:13.652 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:09:13.653 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:09:14.849 [http-nio-8080-exec-2] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:09:14.850 [http-nio-8080-exec-2] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:09:26.981 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+15:09:27.003 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+15:09:27.004 [Thread-23] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:09:27.004 [Thread-23] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:09:27.006 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+15:09:27.010 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+15:09:27.010 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:09:27.011 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+15:09:27.013 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+15:09:27.103 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 13368 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:09:27.104 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:09:27.263 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:09:27.288 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+15:09:27.350 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:09:27.351 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:09:27.351 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:09:27.351 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:09:27.386 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:09:27.387 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 281 ms
+15:09:27.417 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:09:27.425 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+15:09:27.432 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+15:09:27.433 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:09:27.753 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:09:27.753 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:09:27.869 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:09:27.869 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.877 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.880 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.884 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.888 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.892 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.895 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.899 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.902 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.905 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.908 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.911 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.914 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.917 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.920 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.925 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.929 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.931 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.935 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.937 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.940 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.943 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.945 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.948 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.952 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.954 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.957 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.961 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.964 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.967 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.970 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.974 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.977 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:09:27.980 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:27.981 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:27.988 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:27.993 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:27.998 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.004 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.009 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.013 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.017 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.021 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.025 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.042 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:28.042 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.046 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.051 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.055 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.059 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.070 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:28.070 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.075 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.079 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.083 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.087 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.091 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.100 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:09:28.100 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.105 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.110 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.114 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:09:28.123 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:09:28.127 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:09:28.132 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:09:28.170 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:09:28.196 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:09:28.199 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:09:28.207 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:09:28.209 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 1.135 seconds (JVM running for 176.115)
+15:09:28.211 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:09:28.211 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:09:30.777 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:09:30.778 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:09:30.779 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:09:30.781 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:09:30.782 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:09:31.736 [http-nio-8080-exec-2] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:09:31.737 [http-nio-8080-exec-2] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:11:16.405 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 20736 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:11:16.412 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:11:16.516 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\simon.granier\.m2\repository\com\oracle\database\jdbc\ojdbc11\21.5.0.0\ojdbc11-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/simon.granier/.m2/repository/com/oracle/database/jdbc/ojdbc11/21.5.0.0/oraclepki.jar
+15:11:16.517 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+15:11:16.517 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+15:11:17.440 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:11:17.556 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 4 JPA repository interfaces.
+15:11:18.771 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:11:18.783 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:11:18.789 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:11:18.790 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:11:18.936 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:11:18.937 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2419 ms
+15:11:19.454 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:11:19.536 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+15:11:19.803 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+15:11:19.957 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:11:20.350 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:11:20.379 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:11:21.526 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:11:21.541 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:11:22.151 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:11:22.151 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.466 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.474 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.481 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.487 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.493 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.499 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.505 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.512 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.518 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.527 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.532 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.539 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.546 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.553 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.560 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.567 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.572 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.578 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.585 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.592 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.599 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.607 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.613 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.620 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.625 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.635 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.640 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.647 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.652 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.657 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.664 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.670 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:22.676 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:22.676 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.699 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.707 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.713 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.719 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.725 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.731 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.736 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.743 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.750 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.794 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:22.795 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.801 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.808 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.813 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.820 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.834 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:22.835 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.841 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.848 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.854 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.860 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.866 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.878 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:22.878 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.884 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.889 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.894 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:22.903 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:11:22.908 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:11:22.912 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:11:23.222 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:11:23.540 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:11:23.566 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:11:23.627 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:11:23.650 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 7.994 seconds (JVM running for 8.796)
+15:11:23.659 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:11:26.940 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:11:26.941 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:11:26.943 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+15:11:26.988 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:11:26.988 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:11:28.796 [http-nio-8080-exec-2] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:11:28.797 [http-nio-8080-exec-2] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:11:57.085 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+15:11:57.113 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+15:11:57.114 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:11:57.116 [Thread-5] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:11:57.120 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+15:11:57.125 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+15:11:57.128 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:11:57.132 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:11:57.147 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:11:57.275 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Starting ChopyApplication using Java 17.0.8.1 on ITMFRCND2290T4N with PID 20736 (C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy\target\classes started by frup00090737 in C:\Users\simon.granier\OneDrive - GFI\Bureau\Github mais qui marche\projet_maeven\chopy)
+15:11:57.276 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - No active profile set, falling back to 1 default profile: "default"
+15:11:57.510 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:11:57.539 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+15:11:57.653 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:11:57.655 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:11:57.656 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:11:57.657 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+15:11:57.714 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring embedded WebApplicationContext
+15:11:57.714 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 435 ms
+15:11:57.768 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:11:57.778 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+15:11:57.786 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+15:11:57.787 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+15:11:58.132 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:11:58.133 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:11:58.328 [restartedMain] INFO  sg.corporation.chopy.util.DataInit - Initialisation des données
+15:11:58.328 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.341 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.346 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.351 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.356 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.360 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.364 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.370 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.375 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.379 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.384 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.389 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.394 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.399 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.403 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.410 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.416 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.420 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.424 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.428 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.432 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.437 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.441 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.446 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.451 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.456 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.461 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.466 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.470 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.475 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.481 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.486 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.492 [restartedMain] INFO  sg.corporation.chopy.entity.Product - Constructeur de la classe Product
+15:11:58.497 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:58.500 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.508 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.515 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.523 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.528 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.534 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.540 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.545 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.551 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.557 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.576 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:58.577 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.583 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.590 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.596 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.607 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.635 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:58.635 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.643 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.648 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.654 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.659 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.665 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.676 [restartedMain] INFO  sg.corporation.chopy.entity.Recipe - Constructeur de la classe Recipe
+15:11:58.676 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.681 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.687 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.693 [restartedMain] INFO  s.c.chopy.entity.Ingredient - Constructeur de la classe Ingredient
+15:11:58.706 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:11:58.712 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:11:58.716 [restartedMain] INFO  sg.corporation.chopy.entity.User - Constructeur de la classe User
+15:11:58.803 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+15:11:58.847 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+15:11:58.852 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:11:58.862 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/chopy'
+15:11:58.866 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Started ChopyApplication in 1.635 seconds (JVM running for 44.012)
+15:11:58.871 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+15:11:58.872 [restartedMain] INFO  s.corporation.chopy.ChopyApplication - Démarrage réussi à l'url : http://localhost:8080/chopy
+15:12:10.899 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/chopy] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:12:10.900 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:12:10.901 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:12:10.903 [http-nio-8080-exec-1] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:12:10.903 [http-nio-8080-exec-1] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()
+15:12:11.639 [http-nio-8080-exec-2] INFO  s.c.chopy.rest.RecipeRestCtrl - API getAllRecipes
+15:12:11.639 [http-nio-8080-exec-2] INFO  s.c.chopy.service.ServiceRecipe - Méthode readAll()

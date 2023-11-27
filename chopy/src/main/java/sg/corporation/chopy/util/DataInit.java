@@ -5,6 +5,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import lombok.extern.slf4j.Slf4j;
 import sg.corporation.chopy.dao.DaoIngredient;
 import sg.corporation.chopy.dao.DaoProduct;
 import sg.corporation.chopy.dao.DaoRecipe;
@@ -15,6 +16,7 @@ import sg.corporation.chopy.entity.Recipe;
 import sg.corporation.chopy.entity.User;
 
 @Component
+@Slf4j
 public class DataInit {
 	
 	@Autowired
@@ -31,7 +33,7 @@ public class DataInit {
 	
 	@PostConstruct
 	public void dataInit() {
-		
+		log.info("Initialisation des données");
 		//
 		Product Pate = daoProduct.save(new Product(0, "Pate", 500, "gramme", "miam"));
 		Product Pate2 = daoProduct.save(new Product(0, "Pate", 1000, "gramme", "miam"));

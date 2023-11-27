@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
 import sg.corporation.chopy.entity.Recipe;
 import sg.corporation.chopy.service.ServiceRecipe;
 
 @RestController
 @RequestMapping(value = "/chopy-api/recipe", headers="Accept=application/json")
-@CrossOrigin(origins = "*")
+@Slf4j
 public class RecipeRestCtrl {
 	
 	@Autowired
@@ -24,11 +25,13 @@ public class RecipeRestCtrl {
 	
 	@GetMapping("/{id}")
 	public Recipe getRecipeWithId(@PathVariable(name = "id") long id) {
+		log.info("API getRecipeWithId");
 		return serviceRecipe.readById(id);
 	}
 	
 	@GetMapping("")
 	public List<Recipe> getAllRecipes() {
+		log.info("API getAllRecipes");
 		List<Recipe> sortedList = serviceRecipe.readAll();
 		Collections.sort(sortedList, Comparator.comparing(s -> s.getIngredients().size()));
 		return sortedList;

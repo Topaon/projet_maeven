@@ -1582,6 +1582,7 @@ drop table if exists product;
 drop table if exists recipe;
 drop table if exists recipe_ingredients;
 drop table if exists user;
+<<<<<<< HEAD
 alter table ingredient drop foreign key FKgg86fhhgm573id99ipfd2br19;
 alter table recipe_ingredients drop foreign key FKg8ssng1dqiwgcptjptldels74;
 alter table recipe_ingredients drop foreign key FKhnsmvxdlwxqq6x2wbgnoef5gr;
@@ -1998,3 +1999,5 @@ drop table if exists product;
 drop table if exists recipe;
 drop table if exists recipe_ingredients;
 drop table if exists user;
+=======
+>>>>>>> 60cdbfb8cc92f2877020b113b1f609352e20050c

@@ -114,6 +114,20 @@ public class DataInit {
 		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Beurre, 12.5f)));
 		daoRecipe.save(soupeCarotte);
 		
+		Recipe soupeCarott = new Recipe(null, "Velouté de carottes, coriandre et éclats de noisettes", "https://static.750g.com/images/1200-630/6233b36c031e28991ad1c10bd164bc15/adobestock-169798799.jpeg");
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Carotte, 125)));
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Coriandre, 0)));
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Noisettes, 10)));
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Beurre, 12.5f)));
+		daoRecipe.save(soupeCarott);
+		
+		Recipe soupeCarot = new Recipe(null, "Velouté de carottes, coriandre et éclats de noisettes", "https://static.750g.com/images/1200-630/6233b36c031e28991ad1c10bd164bc15/adobestock-169798799.jpeg");
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Carotte, 125)));
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Coriandre, 0)));
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Noisettes, 10)));
+		soupeCarotte.getIngredients().add(daoIngredient.save(new Ingredient(0l, Beurre, 12.5f)));
+		daoRecipe.save(soupeCarot);
+		
 		daoUser.save(new User("Simon"));
 		daoUser.save(new User("Jack"));
 		daoUser.save(new User("Matthieu"));

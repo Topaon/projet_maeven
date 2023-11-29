@@ -2141,3 +2141,30 @@ alter table recipe_ingredients add constraint FKg8ssng1dqiwgcptjptldels74 foreig
 alter table recipe_ingredients add constraint FKhnsmvxdlwxqq6x2wbgnoef5gr foreign key (recipe_id) references recipe (id);
 =======
 >>>>>>> 60cdbfb8cc92f2877020b113b1f609352e20050c
+create table ingredient (id bigint not null auto_increment, quantity float not null, product_id bigint, primary key (id)) engine=InnoDB;
+create table product (id bigint not null auto_increment, description varchar(255), quantity integer, type varchar(255), unit varchar(255), primary key (id)) engine=InnoDB;
+create table recipe (id bigint not null auto_increment, image_url varchar(255), name varchar(255), primary key (id)) engine=InnoDB;
+create table recipe_ingredients (recipe_id bigint not null, ingredients_id bigint not null) engine=InnoDB;
+create table user (id bigint not null auto_increment, planning varchar(255), username varchar(255), primary key (id)) engine=InnoDB;
+alter table recipe_ingredients add constraint UK_adlqiu427fu7igg7385el0xjh unique (ingredients_id);
+alter table ingredient add constraint FKgg86fhhgm573id99ipfd2br19 foreign key (product_id) references product (id);
+alter table recipe_ingredients add constraint FKg8ssng1dqiwgcptjptldels74 foreign key (ingredients_id) references ingredient (id);
+alter table recipe_ingredients add constraint FKhnsmvxdlwxqq6x2wbgnoef5gr foreign key (recipe_id) references recipe (id);
+create table ingredient (id bigint not null auto_increment, quantity float not null, product_id bigint, primary key (id)) engine=InnoDB;
+create table product (id bigint not null auto_increment, description varchar(255), quantity integer, type varchar(255), unit varchar(255), primary key (id)) engine=InnoDB;
+create table recipe (id bigint not null auto_increment, image_url varchar(255), name varchar(255), primary key (id)) engine=InnoDB;
+create table recipe_ingredients (recipe_id bigint not null, ingredients_id bigint not null) engine=InnoDB;
+create table user (id bigint not null auto_increment, planning varchar(255), username varchar(255), primary key (id)) engine=InnoDB;
+alter table recipe_ingredients add constraint UK_adlqiu427fu7igg7385el0xjh unique (ingredients_id);
+alter table ingredient add constraint FKgg86fhhgm573id99ipfd2br19 foreign key (product_id) references product (id);
+alter table recipe_ingredients add constraint FKg8ssng1dqiwgcptjptldels74 foreign key (ingredients_id) references ingredient (id);
+alter table recipe_ingredients add constraint FKhnsmvxdlwxqq6x2wbgnoef5gr foreign key (recipe_id) references recipe (id);
+create table ingredient (id bigint not null auto_increment, quantity float not null, product_id bigint, primary key (id)) engine=InnoDB;
+create table product (id bigint not null auto_increment, description varchar(255), quantity integer, type varchar(255), unit varchar(255), primary key (id)) engine=InnoDB;
+create table recipe (id bigint not null auto_increment, image_url varchar(255), name varchar(255), primary key (id)) engine=InnoDB;
+create table recipe_ingredients (recipe_id bigint not null, ingredients_id bigint not null) engine=InnoDB;
+create table user (id bigint not null auto_increment, planning varchar(255), username varchar(255), primary key (id)) engine=InnoDB;
+alter table recipe_ingredients add constraint UK_adlqiu427fu7igg7385el0xjh unique (ingredients_id);
+alter table ingredient add constraint FKgg86fhhgm573id99ipfd2br19 foreign key (product_id) references product (id);
+alter table recipe_ingredients add constraint FKg8ssng1dqiwgcptjptldels74 foreign key (ingredients_id) references ingredient (id);
+alter table recipe_ingredients add constraint FKhnsmvxdlwxqq6x2wbgnoef5gr foreign key (recipe_id) references recipe (id);

@@ -131,5 +131,6 @@ public class DataInit {
 		daoUser.save(new User("Simon"));
 		daoUser.save(new User("Jack"));
 		daoUser.save(new User("Matthieu"));
+		daoUser.save(new User("Sett"));
 	}
 }

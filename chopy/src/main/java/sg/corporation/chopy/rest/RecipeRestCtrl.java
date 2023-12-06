@@ -18,6 +18,7 @@ import sg.corporation.chopy.service.ServiceRecipe;
 @RestController
 @RequestMapping(value = "/chopy-api/recipe", headers="Accept=application/json")
 @Slf4j
+@CrossOrigin(origins = "*")
 public class RecipeRestCtrl {
 	
 	@Autowired

@@ -15,17 +15,6 @@ public class EchoApplication {
 	
 	public static void test() {
 		
-		String string1 = "nouveau caractère";
-		
-		List<String> maliste = new ArrayList<String>();
-		maliste.add("coucou");
-		maliste.add("bonjour");
-		maliste.add("salut");
-		maliste.add("hey");
-		
-		String txt = "frais";
-		
-		search(txt);
 	}
 	
 	public static void search(String txt) {
